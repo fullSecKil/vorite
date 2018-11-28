@@ -1,6 +1,8 @@
 package com.zui.vorite.controller;
 
+import com.zui.vorite.pojo.Caricature;
 import com.zui.vorite.pojo.User;
+import com.zui.vorite.service.CaricatureService;
 import com.zui.vorite.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,7 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * @author Dusk
@@ -24,9 +28,17 @@ public class ManageController {
     @Value("${spring.servlet.multipart.location}")
     private String UPLOAD_PATH;
 
+    private BCryptPasswordEncoder passwordEncoder;
+
     private UserService userService;
 
-    private BCryptPasswordEncoder passwordEncoder;
+    private CaricatureService caricatureService;
+
+
+    @Autowired
+    void getPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
 
     @Autowired
     void getUserService(UserService userService) {
@@ -34,8 +46,8 @@ public class ManageController {
     }
 
     @Autowired
-    void getPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
+    void getCaricatureService(CaricatureService caricatureService) {
+        this.caricatureService = caricatureService;
     }
 
     @GetMapping("/login")
@@ -78,7 +90,7 @@ public class ManageController {
     public String userCreate(@RequestPart("profilePicture") MultipartFile file, @Validated User user) {
 
         User userCaricature = user;
-        user.setHeader(UPLOAD_PATH + file.getOriginalFilename());
+        Optional.ofNullable(file).map(MultipartFile::getOriginalFilename).ifPresent(n -> user.setHeader(UPLOAD_PATH + n));
         userCaricature.setPassword(passwordEncoder.encode(userCaricature.getPassword()));
         int a = userService.insertOrUpdate(user);
         return "redirect:/caricature/manage/user_list";
@@ -86,7 +98,7 @@ public class ManageController {
 
     @GetMapping(value = "/user_edit")
     @ResponseBody
-    public Map<String, Object> userEdit(@RequestParam("id") Long id){
+    public Map<String, Object> userEdit(@RequestParam("id") Long id) {
         User editUser = userService.getUser(id);
         Map<String, Object> result = new HashMap<>(2);
         result.put("user", editUser);
@@ -94,7 +106,7 @@ public class ManageController {
     }
 
     @GetMapping(value = "/user_del/{id}")
-    public String userDel(@PathVariable("id") Long id){
+    public String userDel(@PathVariable("id") Long id) {
         userService.userDel(id);
         return "redirect:/caricature/manage/user_list";
     }
@@ -102,5 +114,18 @@ public class ManageController {
     @GetMapping(value = "/action_list")
     public String activeList() {
         return "action_list";
+    }
+
+
+    /**
+     * 漫画list
+     * @param model
+     * @return
+     */
+    @GetMapping(value = "/picture_list")
+    public String pictureList(Model model) {
+        List<Caricature> caricatureList = caricatureService.selectAll();
+        model.addAttribute(caricatureList);
+        return "caricature_list";
     }
 }

@@ -47,14 +47,14 @@ public class UserServiceImpl implements UserService {
 
     /**
      * Optional  避免空指针异常
+     *
      * @param user
      * @return
      */
     @Override
     public int insertOrUpdate(User user) {
-        int flag =0;
-        flag = Optional.ofNullable(user.getId()).filter(id->userMapper.existsWithPrimaryKey(id)).map(u->userMapper.updateByPrimaryKeySelective(user)).orElse(0);
-        return flag == 0? userMapper.insertSelective(user):flag;
+        int flag = Optional.ofNullable(user.getId()).filter(id -> userMapper.existsWithPrimaryKey(id)).map(u -> userMapper.updateByPrimaryKeySelective(user)).orElse(0);
+        return flag == 0 ? userMapper.insertSelective(user) : flag;
         /**
          * 指令式vs声明式
          */
@@ -68,7 +68,6 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     *
      * @param id
      * @return
      */
