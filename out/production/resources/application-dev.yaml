@@ -1,0 +1,42 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      enabled: true
+      # location:  /root/uploadFiles/
+      location: E:\\download\\
+      max-file-size: 1048576
+      max-request-size: 10485760
+  # druid连接池
+  datasource:
+    druid:
+      username: root
+      password: 1997050812345Xr
+      url: jdbc:mysql:///my_caricature?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+# mybatis日志
+logging:
+  level:
+    com:
+      battcn: debug
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# 主键自增回写方法,默认值MYSQL
+mapper:
+  identity: MYSQL
+  mappers: tk.mybatis.mapper.common.BaseMapper
+  not-empty: true
+
+# 分页插件
+pagehelper:
+  helper-dialect: mysql
+  params: count
+  reasonable: false
+  support-methods-arguments: true
+

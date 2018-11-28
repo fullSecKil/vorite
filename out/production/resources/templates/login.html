@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+  <head>
+    <title>Admin Login</title>
+    <!-- Bootstrap -->
+    <link href="global/bootstrap/css/bootstrap.min.css" th:href="@{/global/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="global/bootstrap/css/bootstrap-responsive.min.css" th:href="@{/global/bootstrap/css/bootstrap-responsive.min.css}" rel="stylesheet">
+    <link href="global/assets/styles.css" th:href="@{/global/assets/styles.css}" rel="stylesheet">
+     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="global/vendors/modernizr-2.6.2-respond-1.1.0.min.js" th:src="@{/global/vendors/modernizr-2.6.2-respond-1.1.0.min.js}"></script>
+  </head>
+  <body id="login">
+    <div class="container">
+
+      <form class="form-signin" th:action="@{/login}" method="post" enctype="multipart/form-data" >
+        <h2 class="form-signin-heading">请登录</h2>
+        <input type="text" class="input-block-level" name="username" placeholder="用户名">
+        <input type="password" class="input-block-level" name="password" placeholder="密码">
+        <div class="help-block" style="color: red"  th:if="${param.error}">
+          用户名或密码错误
+        </div>
+        <div class="help-block" style="color: green" th:if="${param.logout}">
+          您已注销成功
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> 记住我
+        </label>
+        <button class="btn btn-large btn-primary" type="submit">登陆</button>
+      </form>
+
+    </div> <!-- /container -->
+    <script src="global/vendors/jquery-1.9.1.min.js" th:src="@{/global/vendors/jquery-1.9.1.min.js}"></script>
+    <script src="global/bootstrap/js/bootstrap.min.js" th:src="@{/global/bootstrap/js/bootstrap.min.js}"></script>
+  </body>
+</html>
