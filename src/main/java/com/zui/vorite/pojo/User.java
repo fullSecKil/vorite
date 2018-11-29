@@ -1,6 +1,9 @@
 package com.zui.vorite.pojo;
 
 import lombok.Data;
+import org.apache.ibatis.annotations.MapKey;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.ResultMap;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.GeneratedValue;
@@ -44,6 +47,8 @@ public class User implements Serializable {
 
     private String collection;
 
+    // @MapKey()
+    // @ResultMap(value = "")
     private String roles;
 
     public User() {

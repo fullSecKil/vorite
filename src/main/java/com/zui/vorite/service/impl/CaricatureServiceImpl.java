@@ -24,6 +24,7 @@ public class CaricatureServiceImpl implements CaricatureService {
 
     @Override
     public Caricature getCaricature(Long id) {
+        Caricature c = caricatureMapper.selectByPrimaryKey(id);
         return caricatureMapper.selectByPrimaryKey(id);
     }
 

@@ -126,6 +126,16 @@ public class ManageController {
     public String pictureList(Model model) {
         List<Caricature> caricatureList = caricatureService.selectAll();
         model.addAttribute(caricatureList);
+        model.addAttribute(new Caricature());
         return "caricature_list";
+    }
+
+    @Validated
+    @PostMapping(value = "/picture_form")
+    public String pictureCreate(@Validated Caricature caricature) {
+
+        Caricature picture = caricature;
+        int a = caricatureService.insertOrUpdate(picture);
+        return "redirect:/caricature/manage/picture_list";
     }
 }

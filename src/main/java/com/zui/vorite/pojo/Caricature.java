@@ -35,12 +35,12 @@ public class Caricature implements Serializable {
     private Integer star;
     private String message;
     private Integer level;
-    private String genre;
+    private Integer genre;
 
     public Caricature() {
     }
 
-    public Caricature(Long id, String name, Timestamp createTime, Timestamp updateTime, String title, String url, Integer star, String message, Integer level, String genre) {
+    public Caricature(Long id, String name, Timestamp createTime, Timestamp updateTime, String title, String url, Integer star, String message, Integer level, Integer genre) {
         this.id = id;
         this.name = name;
         this.createTime = createTime;
@@ -125,11 +125,11 @@ public class Caricature implements Serializable {
         this.level = level;
     }
 
-    public String getGenre() {
+    public Integer getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(Integer genre) {
         this.genre = genre;
     }
 
@@ -145,7 +145,7 @@ public class Caricature implements Serializable {
                 ", star=" + star +
                 ", message='" + message + '\'' +
                 ", level=" + level +
-                ", genre='" + genre + '\'' +
+                ", genre=" + genre +
                 '}';
     }
 }

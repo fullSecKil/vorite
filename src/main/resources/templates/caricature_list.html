@@ -26,7 +26,8 @@
                             <div class="span12">
                                 <div class="table-toolbar">
                                     <div class="btn-group">
-                                        <a href="#"><button class="btn btn-success">追加 <i class="icon-plus icon-white"></i></button></a>
+                                        <a href="#"><button class="btn btn-success" data-toggle="modal"
+                                                            data-target="#caricatureCreateModal">追加 <i class="icon-plus icon-white"></i></button></a>
                                     </div>
                                     <div class="btn-group pull-right">
                                         <button data-toggle="dropdown" class="btn dropdown-toggle">工具 <span class="caret"></span></button>
@@ -81,7 +82,77 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- /block -->
+                    <div class="modal fade" id="userCreateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <form class="form-horizontal" th:action="@{/caricature/manage/picture_form}"
+                                          th:object="${caricature}" method="post" enctype="multipart/form-data">
+                                        <fieldset>
+                                            <legend>漫画追加</legend>
+                                            <div class="control-group">
+                                                <label class="control-label" for="name">名字</label>
+                                                <div class="controls">
+                                                    <input class="input-large focused" id="name" th:field="*{name}"
+                                                           type="text" value="This is focused...">
+                                                </div>
+                                            </div>
+                                            <div class="control-group" for="title">
+                                                <label class="control-label">标题</label>
+                                                <div class="controls">
+                                                    <input class="input-large focused" id="title" th:field="*{title}"
+                                                           type="text" value="This is focused...">
+                                                </div>
+                                            </div>
+                                            <div class="control-group" for="url">
+                                                <label class="control-label">超链接</label>
+                                                <div class="controls">
+                                                    <input class="input-large focused" id="url" th:field="*{url}"
+                                                           type="url" value="This is focused...">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="message">描述</label>
+                                                <div class="controls">
+                                                    <input class="input-large focused" id="message" th:field="*{message}"
+                                                           type="text" value="This is focused...">
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group">
+                                                <label class="control-label" for="selectGenre">类型</label>
+                                                <div class="controls">
+                                                    <select id="selectGenre" th:field="*{genre}" th:value="*{genre}" name="genre">
+                                                        <option value="">请选择角色</option>
+                                                        <option th:selected="*{genre eq 'COMMON'}" value="COMMON">一般</option>
+                                                        <option th:selected="*{genre eq 'MEMBER'}" value="MEMBER">会员</option>
+                                                        <option th:selected="*{genre eq 'MEMBER,LEADER'}" value="MEMBER,LEADER">保守员</option>
+                                                        <option th:selected="*{genre eq 'SUPER_ADMIN'}" value="SUPER_ADMIN">管理员</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="control-group hidden">
+                                                <label class="control-label"></label>
+                                                <div class="controls">
+                                                    <input class="input-large uneditable-input"
+                                                           id="id" name="id">
+                                                </div>
+                                            </div>
+                                            <div class="form-actions">
+                                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                                <button type="reset" class="btn">Cancel</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
                 </div>
             </div>
         </div>
