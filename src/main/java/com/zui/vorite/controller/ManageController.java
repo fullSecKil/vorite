@@ -34,7 +34,6 @@ public class ManageController {
 
     private CaricatureService caricatureService;
 
-
     @Autowired
     void getPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
@@ -136,6 +135,21 @@ public class ManageController {
 
         Caricature picture = caricature;
         int a = caricatureService.insertOrUpdate(picture);
+        return "redirect:/caricature/manage/picture_list";
+    }
+
+    @GetMapping(value = "/picture_edit")
+    @ResponseBody
+    public Map<String, Object> pictureEdit(@RequestParam("id") Long id) {
+        Caricature caricature = caricatureService.getCaricature(id);
+        Map<String, Object> result = new HashMap<>(2);
+        result.put("caricature", caricature);
+        return result;
+    }
+
+    @GetMapping(value = "/picture_del/{id}")
+    public String pictureDel(@PathVariable("id") Long id){
+        caricatureService.caricatureDel(id);
         return "redirect:/caricature/manage/picture_list";
     }
 }

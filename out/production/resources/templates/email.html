@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>cssmoban</title>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <!-- //Custom Theme files -->
+    <style type="text/css">
+        body{
+            background-color:#a7d9fb;
+            width: 100%;
+            margin:0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        html{
+            width: 100%;
+        }
+        table{
+            font-size: 14px;
+            border:0;
+        }
+        /* ----------- responsive ----------- */
+        @media only screen and (max-width:810px){
+            table.table-head {
+                width: 725px !important;
+            }
+        }
+        @media only screen and (max-width:768px){
+            table.table-head {
+                width: 680px !important;
+            }
+            .header-top{
+                width: 650px !important;
+            }
+            .header-mid{
+                width: 290px !important;
+            }
+        }
+
+        @media only screen and (max-width:700px){
+            table.table-head {
+                width: 600px !important;
+            }
+            .header-top{
+                width: 550px !important;
+            }
+            .header-mid{
+                width: 220px !important;
+            }
+        }
+        @media only screen and (max-width:670px){
+            table.table-head {
+                width: 550px !important;
+            }
+            .header-top{
+                width: 500px !important;
+            }
+            .header-mid{
+                width: 240px !important;
+            }
+            .logo{
+                width: 100% !important;
+            }
+            .nav{
+                width: 100% !important;
+            }
+            .nav-menu{
+                text-align:center !important;
+                padding-top: 8px !important;
+            }
+            .high{
+                height:120px !important;
+            }
+            .high1{
+                height:70px !important;
+            }
+            .banner{
+                width: 500px !important;
+            }
+            .wel{
+                font-size:2.3em !important;
+            }
+            .text-small{
+                font-size:1.1em !important;
+            }
+            .text-high{
+                font-size:2.5em !important;
+            }
+            .logo-text{
+                color:#519FD4 !important;
+            }
+            .nav-menu a{
+                color:#000 !important;
+            }
+            td.nav-social {
+                text-align: center !important;
+                width: 22% !important;
+                margin: 0 auto !important;
+                display: block !important;
+            }
+        }
+        @media only screen and (max-width:570px){
+            table.table-head {
+                width: 400px !important;
+            }
+            .header-top{
+                width: 350px !important;
+            }
+            .header-mid{
+                width: 100% !important;
+            }
+            .banner {
+                width: 350px !important;
+            }
+            .content-bottom{
+                width:350px !important;
+            }
+            .text-high {
+                font-size: 2em !important;
+                text-align: center !important;
+            }
+            .header-mid1{
+                padding-top:15px !important;
+            }
+            .high-top{
+                height:20px !important;
+            }
+            .high-top1{
+                height:30px !important;
+            }
+            .high-1{
+                height:15px !important;
+            }
+            .high {
+                height: 90px !important;
+            }
+            .high1 {
+                height: 55px !important;
+            }
+            .header-mid1 {
+                padding-top: 24px !important;
+            }
+            .header-mid2{
+                padding-top: 15px !important;
+            }
+            .high-bottom{
+                height: 60px !important;
+            }
+            .high-bottom1{
+                height: 200px !important;
+            }
+            .high {
+                height: 70px !important;
+            }
+
+        }
+        @media only screen and (max-width:420px){
+            table.table-head {
+                width:350px !important;
+            }
+            .header-top{
+                width: 280px !important;
+            }
+            .day{
+                font-size:2em !important;
+            }
+            .banner {
+                width: 280px !important;
+            }
+            .content-bottom{
+                width:280px !important;
+            }
+            .text-high {
+                font-size: 1.6em !important;
+            }
+            .header-mid1{
+                padding-top:10px !important;
+            }
+            .high-top{
+                height:15px !important;
+            }
+            .high-top1{
+                height:20px !important;
+            }
+            .high-1{
+                height:10px !important;
+            }
+            .high {
+                height: 30px !important;
+            }
+            .high1 {
+                height: 40px !important;
+            }
+            .header-mid1 {
+                padding-top: 20px !important;
+            }
+            .header-mid2{
+                padding-top: 10px !important;
+            }
+            .high-bottom{
+                height: 40px !important;
+            }
+            .high-bottom1{
+                height: 130px !important;
+            }
+
+            .nav-menu {
+                font-size:0.85em !important;
+            }
+            td.nav-social {
+                width: 36% !important;
+            }
+            .high-2{
+                height:25px !important;
+            }
+            .para{
+                font-size:0.9em !important;
+                line-height:1.8em !important;
+            }
+            .read{
+                font-size: 0.9em !important;
+            }
+            .wel {
+                font-size: 2em !important;
+            }
+            .high-4{
+                height:10px !important;
+            }
+            .logo-text {
+                font-size: 2.4em !important;
+            }
+        }
+        @media only screen and (max-width:375px){
+            table.table-head {
+                width: 270px !important;
+            }
+            .header-top{
+                width: 230px !important;
+            }
+            .day{
+                font-size:2em !important;
+            }
+            .banner {
+                width: 230px !important;
+            }
+            .content-bottom{
+                width:230px !important;
+            }
+
+
+        }
+    </style>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+    <tr><td height="30" ></td></tr>
+    <tr >
+        <td width="100%" align="center" valign="top" >
+            <!--main-content-->
+            <table class="table-head" width="800" border="0" cellpadding="0" cellspacing="0" align="center" >
+                <!--header-->
+                <tr >
+                    <td background="http://demo.cssmoban.com/cssthemes4/cpts_634_bqn/images/ab.jpg" style="background-size:cover;background-position:center;">
+                        <!--header-->
+                        <table width="720" border="0" cellpadding="0" cellspacing="0" align="center"  height="85" class="header-top">
+                            <tr>
+                                <td height="30" class="high-1"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border="0" align="left" cellpadding="0" cellspacing="0" class="logo">
+
+                                        <tr>
+                                            <td align="center">
+                                                <a href="#" class="logo-text" style="text-decoration: none; color:#fff; font-size: 3em; font-family: Myriad Pro;" >Sunset</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table border="0" align="right" cellpadding="0" cellspacing="0" class="nav">
+
+                                        <tr>
+                                            <td  style="text-align:right; font-size: 1.1em; font-family: Verdana;" class="nav-menu">
+                                                <a style="text-decoration: none; color:#ec3003" href="#"></a>
+                                                <span>&nbsp; &nbsp;</span>
+                                                <a style="text-decoration: none; color:#ec3003" href="#"></a>
+                                                <span>&nbsp; &nbsp;</span>
+                                                <a style="text-decoration: none; color:#ec3003" href="#"></a>
+
+                                                <span>&nbsp; &nbsp;</span>
+                                                <a style="text-decoration: none; color:#ec3003" href="#"></a>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10"></td>
+                                        </tr>
+                                        <tr>
+                                            <td align="right" class="nav-social">
+                                                <table>
+                                                    <tr>
+                                                        <td width="22">
+                                                            <a href="#"><img src="http://demo.cssmoban.com/cssthemes4/cpts_634_bqn/images/dr.png" width="24" height="24"></a>
+                                                        </td>
+                                                        <td width="1">
+                                                        </td>
+                                                        <td width="22">
+                                                            <a href="#"><img src="http://demo.cssmoban.com/cssthemes4/cpts_634_bqn/images/fa.png" width="24" height="24"></a>
+                                                        </td>
+                                                        <td width="1">
+                                                        </td>
+                                                        <td width="22">
+                                                            <a href="#"><img src="http://demo.cssmoban.com/cssthemes4/cpts_634_bqn/images/ga.png" width="24" height="24"></a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                        </table>
+                        <!--//header-->
+                        <table border="0"  width="490" cellpadding="0" cellspacing="0" align="center" class="banner">
+                            <tr ><td height="250" class="high">
+                            </td></tr>
+                            <tr>
+                                <td >
+                            <tr>
+                                <td style="color: #000; font-size: 2.5em;text-align:center; font-family:  Trajan Pro;   letter-spacing: 2px;" class="day">
+                                    感谢您的注册
+                                </td>
+                            </tr>
+                            <tr><td height="40"></td></tr>
+
+                            <tr>
+                                <td style="color: #777;font-size: 1.1em;font-family: Verdana;text-align:left; font-weight: normal;line-height: 2.2em;" class="para">
+                                    尊敬的 <span th:text="${username}"/> 您<span th:text="${#dates.format(time, 'yyyy-MM-dd')}"/> 在sunset成功注册。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #777;font-size: 1.1em;font-family: Verdana;text-align:left; font-weight: normal;line-height: 2.2em;" class="para">
+                                    这是您注册的详细信息，万望看到此邮件后删除，以免密码泄露。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:2.5em; color:#ff7f00; font-family:Trajan Pro; text-align:left;">
+                                    用户名：<span th:text="${username}"></span>
+                                </td>
+                            </tr>
+                            <td style="font-size:2.5em; font-family:Trajan Pro; text-align:left; color:#3299cc;">
+                                密码：<span th:text="${password}"/>
+                            </td>
+
+                            <tr>
+                            </tr>
+                            <tr><td height="65"></td></tr>
+                            <tr><td align="center">
+                                <a href="#" style="font-family: Verdana;text-align:center; font-size: 1.1em;color: #519FD4;text-decoration: none; border: 2px solid #519FD4; width:106px; height: 32px; padding: 5px 10px;" class="read">
+                                    了解更多</a>
+                            </td></tr>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td height="100" class="high1"></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <!--//about-->
+
+                <!--//services-->
+                <!--footer strat here-->
+                <tr bgcolor="#ffffff">
+                    <td>
+                        <table width="720" align="center" border="0" cellpadding="0" cellspacing="0" class="header-top">
+
+                            <tr>
+                                <td   height="30" class="high-2"> </td>
+                            </tr>
+
+                            <tr>
+                                <td  height="10"> </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:0.95em; color:#777; font-family:Verdana; line-height:2.5em; text-align: center;" class="para">
+                                    我之所以看得更远，因为我站在巨人的肩膀上。
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center; color:#777;font-family:Verdana; font-size:1em; line-height:1.8em;" class="para">Copyright © 2018.页面由Dusk 赞助提供
+                                </td>
+                            </tr>
+                            <tr>
+                                <td   height="50" class="high-2"> </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+    <!--//main-content-->
+
+    <tr><td height="30"></td></tr>
+</table>
+</body>
+</html>

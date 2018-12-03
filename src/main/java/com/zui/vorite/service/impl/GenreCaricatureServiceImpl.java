@@ -27,6 +27,16 @@ public class GenreCaricatureServiceImpl implements GenreCaricatureService {
 
     @Override
     public List<GenreCaricature> selectAll() {
-        return genreCaricatureMapper.seletAllGenreCaricature();
+        return genreCaricatureMapper.selectAll();
+    }
+
+    @Override
+    public List<GenreCaricature> selectAllGenreAndCaricature() {
+        return genreCaricatureMapper.selectAllGenreCaricature();
+    }
+
+    @Override
+    public GenreCaricature selectById(Long id) {
+        return genreCaricatureMapper.selectByPrimaryKey(id);
     }
 }

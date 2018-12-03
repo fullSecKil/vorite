@@ -12,7 +12,13 @@ import java.util.List;
  */
 public interface GenreCaricatureService {
     /**
+     * 种类中的漫画都select出来
      * @return
      */
     List<GenreCaricature> selectAll();
+
+    List<GenreCaricature> selectAllGenreAndCaricature();
+
+    GenreCaricature selectById(Long id);
+
 }

@@ -42,8 +42,14 @@ dependencies {
     implementation('com.alibaba:druid-spring-boot-starter:1.1.9')
     // 通用mapper插件
     implementation('tk.mybatis:mapper-spring-boot-starter:2.0.1')
+    // aop spring-boot-starter-aop
+    implementation('org.springframework.boot:spring-boot-starter-aop')
+    // rabbitmq
+    implementation('org.springframework.boot:spring-boot-starter-amqp')
     // 分页插件
     implementation('com.github.pagehelper:pagehelper-spring-boot-starter:1.2.5')
+    // 邮件
+    implementation('org.springframework.boot:spring-boot-starter-mail')
     compileOnly('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

@@ -17,6 +17,22 @@ spring:
       password: 1997050812345Xr
       url: jdbc:mysql:///my_caricature?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
       driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 47.98.186.6
+    port: 5672
+    virtual-host: /
+    listener:
+      simple:
+      # 手动ACK 不开启自动ACK模式
+        acknowledge-mode: manual
+  mail:
+    host: smtp.163.com
+    username: en2213@163.com
+    password: VisT2iiLc
+    properties:
+      mail:
+        smtp:
+          auth: true
 
 # mybatis日志
 logging:
@@ -39,4 +55,3 @@ pagehelper:
   params: count
   reasonable: false
   support-methods-arguments: true
-

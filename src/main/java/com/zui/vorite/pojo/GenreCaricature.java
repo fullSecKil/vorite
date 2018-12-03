@@ -78,7 +78,6 @@ public class GenreCaricature implements Serializable {
                 "id=" + id +
                 ", genre='" + genre + '\'' +
                 ", genreDescribe='" + genreDescribe + '\'' +
-                ", caricatureList=" + caricatureList +
                 '}';
     }
 }

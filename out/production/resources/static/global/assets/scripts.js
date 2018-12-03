@@ -81,3 +81,26 @@ function onclickUserEdit(userId) {
          }
      });
 }
+
+function onclickPictureEdit(pictureId) {
+    if(pictureId<=0){
+        return;
+    }
+
+    $.ajax({
+        url: '/caricature/manage/picture_edit',
+        type: 'GET',
+        data: {'id': pictureId},
+        dataType: 'json',
+        success: function (result) {
+            var caricature = result.caricature;
+            $('#id').val(caricature.id);
+            $('#name').val(caricature.name);
+            $('#title').val(caricature.title);
+            $('#url').val(caricature.url);
+            $('#message').val(caricature.message);
+            $('#title').val(caricature.title);
+            $('#selectGenre').val(caricature.genre);
+        }
+    });
+}
