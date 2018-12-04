@@ -57,7 +57,7 @@ public class SendMail implements Send{
 
         Context emailContext = new Context();
         emailContext.setVariables(context);
-        String process = templateEngine.process("email", emailContext);
+        String process = templateEngine.process("emailTemplate", emailContext);
 
         // 发送者
         helper.setFrom(provider);

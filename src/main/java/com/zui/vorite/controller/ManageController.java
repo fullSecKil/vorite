@@ -89,6 +89,8 @@ public class ManageController {
     public String userCreate(@RequestPart("profilePicture") MultipartFile file, @Validated User user) {
 
         User userCaricature = user;
+        // 存入cache
+        userService.cachePutPassward(userCaricature.getEmail(), userCaricature.getPassword());
         Optional.ofNullable(file).map(MultipartFile::getOriginalFilename).ifPresent(n -> user.setHeader(UPLOAD_PATH + n));
         userCaricature.setPassword(passwordEncoder.encode(userCaricature.getPassword()));
         int a = userService.insertOrUpdate(user);

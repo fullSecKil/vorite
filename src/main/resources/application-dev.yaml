@@ -33,6 +33,12 @@ spring:
       mail:
         smtp:
           auth: true
+  # redis
+  redis:
+    host: 47.98.186.6
+    password: VisT2iiLc
+    # 连接超时
+    timeout: 10000
 
 # mybatis日志
 logging:

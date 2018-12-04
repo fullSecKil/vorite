@@ -4,9 +4,12 @@ import com.zui.vorite.dao.UserMapper;
 import com.zui.vorite.pojo.User;
 import com.zui.vorite.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -74,6 +77,40 @@ public class UserServiceImpl implements UserService {
     @Override
     public int userDel(Long id) {
         return userMapper.deleteByPrimaryKey(id);
+    }
+
+    private static final Map<String, String> DATABASES = new HashMap<>();
+
+    /**
+     *
+     * @param email
+     * @return
+     */
+    @Cacheable(value = "password", key = "email")
+    @Override
+    public String cacheGetPassward(String email) {
+        return DATABASES.get(email);
+    }
+
+    /**
+     *  取出cache中密码
+     * @param email
+     * @param password
+     */
+    @Cacheable(value = "password", key = "email")
+    @Override
+    public void cachePutPassward(String email, String password) {
+        DATABASES.put(email, password);
+    }
+
+    /**
+     *  删除cache
+     * @param email
+     */
+    @Cacheable(value = "password", key = "email")
+    @Override
+    public void cacheDeletePassward(String email) {
+        DATABASES.remove(email);
     }
 
 }

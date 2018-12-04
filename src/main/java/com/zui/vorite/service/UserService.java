@@ -51,4 +51,24 @@ public interface UserService {
      * @return
      */
     int userDel(Long id);
+
+    /**
+     * 从缓存取
+     * @param email
+     * @return
+     */
+    String cacheGetPassward(String email);
+
+    /**
+     * 缓存 email 和 密码
+     * @param email
+     * @param password
+     */
+    void cachePutPassward(String email, String password);
+
+    /**
+     * 删除
+     * @param email
+     */
+    void cacheDeletePassward(String email);
 }
