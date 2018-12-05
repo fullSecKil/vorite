@@ -10,6 +10,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
+ * cariature的种类
  *
  * @file: GenreCaricature.class
  * @since : 2018/11/29 22:01

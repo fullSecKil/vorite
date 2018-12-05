@@ -1,8 +1,10 @@
 package com.zui.vorite.controller;
 
 import com.zui.vorite.pojo.Caricature;
+import com.zui.vorite.pojo.OperationLog;
 import com.zui.vorite.pojo.User;
 import com.zui.vorite.service.CaricatureService;
+import com.zui.vorite.service.OperationLogService;
 import com.zui.vorite.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,19 +36,26 @@ public class ManageController {
 
     private CaricatureService caricatureService;
 
+    private OperationLogService operationLogService;
+
     @Autowired
-    void getPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
+    void setPasswordEncoder(BCryptPasswordEncoder passwordEncoder) {
         this.passwordEncoder = passwordEncoder;
     }
 
     @Autowired
-    void getUserService(UserService userService) {
+    void setUserService(UserService userService) {
         this.userService = userService;
     }
 
     @Autowired
-    void getCaricatureService(CaricatureService caricatureService) {
+    void setCaricatureService(CaricatureService caricatureService) {
         this.caricatureService = caricatureService;
+    }
+
+    @Autowired
+    void setOperationLogService(OperationLogService operationLogService) {
+        this.operationLogService = operationLogService;
     }
 
     @GetMapping("/login")
@@ -91,9 +100,10 @@ public class ManageController {
         User userCaricature = user;
         // 存入cache
         userService.cachePutPassward(userCaricature.getEmail(), userCaricature.getPassword());
-        Optional.ofNullable(file).map(MultipartFile::getOriginalFilename).ifPresent(n -> user.setHeader(UPLOAD_PATH + n));
+
+        Optional.ofNullable(file).filter(f-> !f.isEmpty()).map(MultipartFile::getOriginalFilename).ifPresent(n -> userCaricature.setHeader(UPLOAD_PATH + n));
         userCaricature.setPassword(passwordEncoder.encode(userCaricature.getPassword()));
-        int a = userService.insertOrUpdate(user);
+        int a = userService.insertOrUpdate(userCaricature);
         return "redirect:/caricature/manage/user_list";
     }
 
@@ -112,12 +122,6 @@ public class ManageController {
         return "redirect:/caricature/manage/user_list";
     }
 
-    @GetMapping(value = "/action_list")
-    public String activeList() {
-        return "action_list";
-    }
-
-
     /**
      * 漫画list
      * @param model
@@ -131,6 +135,11 @@ public class ManageController {
         return "caricature_list";
     }
 
+    /**
+     * 漫画添加
+     * @param caricature
+     * @return
+     */
     @Validated
     @PostMapping(value = "/picture_form")
     public String pictureCreate(@Validated Caricature caricature) {
@@ -140,6 +149,11 @@ public class ManageController {
         return "redirect:/caricature/manage/picture_list";
     }
 
+    /**
+     * picture编辑
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/picture_edit")
     @ResponseBody
     public Map<String, Object> pictureEdit(@RequestParam("id") Long id) {
@@ -149,9 +163,32 @@ public class ManageController {
         return result;
     }
 
+    /**
+     * picture 删除拦截
+     * @param id
+     * @return
+     */
     @GetMapping(value = "/picture_del/{id}")
     public String pictureDel(@PathVariable("id") Long id){
         caricatureService.caricatureDel(id);
         return "redirect:/caricature/manage/picture_list";
+    }
+
+    /**
+     * 打印出操作
+     * @param model
+     * @return
+     */
+    @GetMapping(value = "/action_list")
+    public String actionList(Model model){
+        List<OperationLog> operationLog = operationLogService.seleteAll();
+        model.addAttribute(operationLog);
+        return "action_list";
+    }
+
+    @GetMapping(value = "/caricature_form")
+    public String caricatureForm(Model model){
+        model.addAttribute(new Caricature());
+        return "caracture_form";
     }
 }
