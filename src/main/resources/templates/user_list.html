@@ -173,6 +173,10 @@
             </div>
         </div>
     </div>
+    <hr>
+    <footer>
+        <div th:replace="tags/component :: footer"></div>
+    </footer>
 </div>
 </body>
 
@@ -181,6 +185,10 @@
 <script src="vendors/jquery.uniform.min.js" th:src="@{/global/vendors/jquery.uniform.min.js}"></script>
 <script src="vendors/datatables/js/jquery.dataTables.min.js"
         th:src="@{/global/vendors/datatables/js/jquery.dataTables.min.js}"></script>
+
+<script type="text/javascript" src="vendors/jquery-validation/dist/jquery.validate.min.js" th:src="@{/global/vendors/jquery-validation/dist/jquery.validate.min.js}" ></script>
+<script src="assets/form-validation.js" th:src="@{/global/assets/form-validation.js}"></script>
+
 <script src="assets/scripts.js" th:src="@{/global/assets/scripts.js}"></script>
 <script src="assets/DT_bootstrap.js" th:src="@{/global/assets/DT_bootstrap.js}"></script>
 </html>

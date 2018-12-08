@@ -1,9 +1,11 @@
 package com.zui.vorite.controller;
 
 import com.zui.vorite.pojo.Caricature;
+import com.zui.vorite.pojo.GenreCaricature;
 import com.zui.vorite.pojo.OperationLog;
 import com.zui.vorite.pojo.User;
 import com.zui.vorite.service.CaricatureService;
+import com.zui.vorite.service.GenreCaricatureService;
 import com.zui.vorite.service.OperationLogService;
 import com.zui.vorite.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
+
 
 /**
  * @author Dusk
@@ -56,11 +60,6 @@ public class ManageController {
     @Autowired
     void setOperationLogService(OperationLogService operationLogService) {
         this.operationLogService = operationLogService;
-    }
-
-    @GetMapping("/login")
-    public String login() {
-        return "login";
     }
 
     @GetMapping
@@ -187,7 +186,11 @@ public class ManageController {
     }
 
     @GetMapping(value = "/caricature_form")
-    public String caricatureForm(Model model){
+    public String caricatureForm(Model model, @Value("#{genreCaricatureServiceImpl.selectAll()}") List<GenreCaricature> genreCaricatureServiceList){
+        List<Caricature> caricatureList = caricatureService.selectAll();
+        Map<Long, String> caricatureNameMap = caricatureList.stream().collect(Collectors.toMap(Caricature::getId, Caricature::getName));
+        Map<Long, String> genreCaricatureServiceNameMap= genreCaricatureServiceList.stream().collect(Collectors.toMap(GenreCaricature::getId, GenreCaricature::getGenre));
+
         model.addAttribute(new Caricature());
         return "caracture_form";
     }
