@@ -36,12 +36,12 @@ public class Caricature implements Serializable {
     private String message;
     private Integer level;
     private Integer genre;
+    private Boolean isAction;
 
     public Caricature() {
     }
 
-    public Caricature(Long id, String name, Timestamp createTime, Timestamp updateTime, String title, String url, Integer star, String message, Integer level, Integer genre) {
-        this.id = id;
+    public Caricature(@NotBlank(message = "漫画名不能为空") String name, Timestamp createTime, Timestamp updateTime, String title, String url, Integer star, String message, Integer level, Integer genre, Boolean isAction) {
         this.name = name;
         this.createTime = createTime;
         this.updateTime = updateTime;
@@ -51,6 +51,7 @@ public class Caricature implements Serializable {
         this.message = message;
         this.level = level;
         this.genre = genre;
+        this.isAction = isAction;
     }
 
     public Long getId() {
@@ -133,6 +134,14 @@ public class Caricature implements Serializable {
         this.genre = genre;
     }
 
+    public Boolean getAction() {
+        return isAction;
+    }
+
+    public void setAction(Boolean action) {
+        isAction = action;
+    }
+
     @Override
     public String toString() {
         return "Caricature{" +
@@ -146,6 +155,7 @@ public class Caricature implements Serializable {
                 ", message='" + message + '\'' +
                 ", level=" + level +
                 ", genre=" + genre +
+                ", isAction=" + isAction +
                 '}';
     }
 }

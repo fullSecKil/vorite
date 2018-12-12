@@ -33,43 +33,39 @@
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
-                                    <form class="form-horizontal">
+                                    <form class="form-horizontal" th:action="@{/caricature/manage/caricature_form}" th:object="${caricature}" method="post" enctype="multipart/form-data">
                                         <fieldset>
                                             <legend>漫画上传</legend>
 
                                             <div class="control-group">
-                                                <label class="control-label" for="select01">漫画名</label>
+                                                <label class="control-label" for="name">漫画名</label>
                                                 <div class="controls">
-                                                    <select id="select01" class="chzn-select">
-                                                        <option>输入可以直接追加</option>
-                                                        <option>2</option>
-                                                        <option>3</option>
-                                                        <option>4</option>
-                                                        <option>5</option>
+                                                    <select class="chzn-select" id="name" th:id="name" th:field="*{name}" >
+                                                        <option th:each="caricatureName : ${caricatureNameMap}" th:value="${caricatureName.getValue()}" th:text="${caricatureName.getKey()}"></option>
                                                     </select>
                                                 </div>
                                             </div>
 
                                             <div class="control-group">
-                                                <label class="control-label" for="typeahead">标题</label>
+                                                <label class="control-label" for="title">标题</label>
                                                 <div class="controls">
-                                                    <input type="text" class="span6" id="typeahead"  data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
+                                                    <input type="text" class="span6" id="title" th:id="title" th:field="*{title}" data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
                                                     <p class="help-block">定义一个吸引人的标题！</p>
                                                 </div>
                                             </div>
                                             <div class="control-group">
-                                                <label class="control-label" for="date01">更新时间</label>
+                                                <label class="control-label" for="updateTime">更新时间</label>
                                                 <div class="controls">
-                                                    <input type="text" class="input-xlarge datepicker" id="date01" value="02/16/12">
+                                                    <input type="text" class="input-xlarge datepicker" id="updateTime" th:id="updateTime" th:field="*{updateTime}" value="02/16/12">
                                                     <p class="help-block">设置更新日期，默认上传时期</p>
                                                 </div>
                                             </div>
 
                                             <div class="control-group">
-                                                <label class="control-label" for="multiSelect">种类</label>
+                                                <label class="control-label" for="genre">种类</label>
                                                 <div class="controls">
-                                                    <select multiple="multiple" id="multiSelect" class="chzn-select span4">
-                                                        <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District Of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+                                                    <select multiple="multiple" id="genre" th:id="genre" class="chzn-select span4">
+                                                        <option th:each="genreCaricature : ${genreCaricatureServiceNameMap}" th:value="${genreCaricature.getKey()}" th:text="${genreCaricature.getValue()}"></option>
                                                     </select>
                                                 </div>
 
@@ -82,19 +78,19 @@
                                             </div>
 
                                             <div class="control-group">
-                                                <label class="control-label" for="optionsCheckbox">是否上架</label>
+                                                <label class="control-label" for="isAction">是否上架</label>
                                                 <div class="controls">
                                                     <label class="uniform">
-                                                        <input class="uniform_on" type="checkbox" id="optionsCheckbox" value="option1">
+                                                        <input class="uniform_on" type="checkbox" th:type="checkbox" id="isAction" th:id="isAction" checked="true">
                                                         没有选中无法阅读
                                                     </label>
                                                 </div>
                                             </div>
 
                                             <div class="control-group">
-                                                <label class="control-label" for="textarea2">描述</label>
+                                                <label class="control-label" for="message">描述</label>
                                                 <div class="controls">
-                                                    <textarea placeholder="输入..." style="width: 610px; height: 200px"></textarea>
+                                                    <textarea placeholder="输入..." id="message" th:id="message" th:field="*{message}" style="width: 610px; height: 200px"></textarea>
                                                 </div>
                                             </div>
                                             <div class="form-actions">

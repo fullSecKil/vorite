@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 
@@ -188,10 +189,18 @@ public class ManageController {
     @GetMapping(value = "/caricature_form")
     public String caricatureForm(Model model, @Value("#{genreCaricatureServiceImpl.selectAll()}") List<GenreCaricature> genreCaricatureServiceList){
         List<Caricature> caricatureList = caricatureService.selectAll();
-        Map<Long, String> caricatureNameMap = caricatureList.stream().collect(Collectors.toMap(Caricature::getId, Caricature::getName));
+        Map<String, Long> caricatureNameMap = caricatureList.stream().collect(Collectors.toMap(Caricature::getName, Caricature::getId, (key1, key2) -> key2));
         Map<Long, String> genreCaricatureServiceNameMap= genreCaricatureServiceList.stream().collect(Collectors.toMap(GenreCaricature::getId, GenreCaricature::getGenre));
 
+        model.addAttribute("caricatureNameMap", caricatureNameMap);
+        model.addAttribute("genreCaricatureServiceNameMap", genreCaricatureServiceNameMap);
         model.addAttribute(new Caricature());
         return "caracture_form";
+    }
+
+    @PutMapping(value = "/caricature_form")
+    public String caricaturePut(){
+        // 稍后处理
+        return "abc";
     }
 }
