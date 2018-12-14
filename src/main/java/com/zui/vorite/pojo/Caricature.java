@@ -1,5 +1,6 @@
 package com.zui.vorite.pojo;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;
@@ -134,12 +135,12 @@ public class Caricature implements Serializable {
         this.genre = genre;
     }
 
-    public Boolean getAction() {
+    public Boolean getIsAction() {
         return isAction;
     }
 
-    public void setAction(Boolean action) {
-        isAction = action;
+    public void setIsAction(Boolean isAction) {
+        this.isAction = isAction;
     }
 
     @Override

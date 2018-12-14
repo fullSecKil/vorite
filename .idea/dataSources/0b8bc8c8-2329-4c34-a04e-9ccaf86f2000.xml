@@ -949,23 +949,26 @@
     <table id="241" parent="8" name="genre_caricature">
       <Engine>InnoDB</Engine>
     </table>
-    <table id="242" parent="8" name="user">
+    <table id="242" parent="8" name="operation_log">
       <Engine>InnoDB</Engine>
     </table>
-    <column id="243" parent="240" name="id">
+    <table id="243" parent="8" name="user">
+      <Engine>InnoDB</Engine>
+    </table>
+    <column id="244" parent="240" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="240" name="name">
+    <column id="245" parent="240" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="240" name="create_time">
+    <column id="246" parent="240" name="create_time">
       <Position>3</Position>
       <Comment>insert数据时</Comment>
       <DataType>datetime|0s</DataType>
@@ -973,131 +976,195 @@
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="240" name="update_time">
+    <column id="247" parent="240" name="update_time">
       <Position>4</Position>
       <Comment>update数据</Comment>
       <DataType>datetime|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
-    <column id="247" parent="240" name="title">
+    <column id="248" parent="240" name="title">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="240" name="url">
+    <column id="249" parent="240" name="url">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="240" name="star">
+    <column id="250" parent="240" name="star">
       <Position>7</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="240" name="message">
+    <column id="251" parent="240" name="message">
       <Position>8</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="240" name="level">
+    <column id="252" parent="240" name="level">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;1&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="240" name="genre">
+    <column id="253" parent="240" name="genre">
       <Position>10</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="253" parent="240" name="id_idx">
+    <column id="254" parent="240" name="is_action">
+      <Position>11</Position>
+      <Comment>是否上架</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="255" parent="240" name="id_idx">
       <ColNames>genre</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="254" parent="240" name="PRIMARY">
+    <key id="256" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="255" parent="240" name="id">
+    <foreign-key id="257" parent="240" name="id">
       <ColNames>genre</ColNames>
       <RefSchemaName>my_caricature</RefSchemaName>
       <RefTableName>genre_caricature</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="256" parent="241" name="id">
+    <column id="258" parent="241" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="241" name="genre">
+    <column id="259" parent="241" name="genre">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="258" parent="241" name="genre_describe">
+    <column id="260" parent="241" name="genre_describe">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="259" parent="241" name="PRIMARY">
+    <key id="261" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="260" parent="242" name="id">
+    <column id="262" parent="242" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="242" name="username">
+    <column id="263" parent="242" name="url">
+      <Position>2</Position>
+      <Comment>url路径</Comment>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="242" name="http_method">
+      <Position>3</Position>
+      <Comment>请求方法</Comment>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="242" name="ip">
+      <Position>4</Position>
+      <DataType>varchar(108)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="242" name="class_method">
+      <Position>5</Position>
+      <Comment>处理类</Comment>
+      <DataType>varchar(108)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="267" parent="242" name="args">
+      <Position>6</Position>
+      <Comment>参数</Comment>
+      <DataType>text|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="268" parent="242" name="response">
+      <Position>7</Position>
+      <Comment>结果</Comment>
+      <DataType>text|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="242" name="time">
+      <Position>8</Position>
+      <DataType>datetime|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="270" parent="242" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="271" parent="243" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="243" name="username">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="242" name="password">
+    <column id="273" parent="243" name="password">
       <Position>3</Position>
       <DataType>varchar(108)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="242" name="email">
+    <column id="274" parent="243" name="email">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="242" name="create_time">
+    <column id="275" parent="243" name="create_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="242" name="header">
+    <column id="276" parent="243" name="header">
       <Position>6</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="242" name="collection">
+    <column id="277" parent="243" name="collection">
       <Position>7</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="267" parent="242" name="roles">
+    <column id="278" parent="243" name="roles">
       <Position>8</Position>
       <DataType>enum(&apos;COMMON&apos;, &apos;MEMBER&apos;, &apos;MEMBER, LEADER&apos;, &apos;SUPER_ADMIN&apos;)|0e</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;COMMON&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="268" parent="242" name="PRIMARY">
+    <key id="279" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

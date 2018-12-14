@@ -22,6 +22,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 
@@ -198,9 +200,19 @@ public class ManageController {
         return "caracture_form";
     }
 
-    @PutMapping(value = "/caricature_form")
-    public String caricaturePut(){
+    @PostMapping(value = "/caricature_form")
+    public String caricaturePut(@RequestPart("fileCaracture") MultipartFile file, @Validated Caricature caricature){
         // 稍后处理
+        Caricature caricature1 = caricature;
+        String regEx = "^(?<id>\\d+)-(?<name>.*)$";
+        Pattern pattern = Pattern.compile(regEx);
+
+        Optional.ofNullable(caricature1.getName()).map(n->pattern.matcher(n)).filter(Matcher::matches).ifPresent(m->{
+            caricature1.setId(Long.parseUnsignedLong(m.group("id")));
+            caricature1.setName(m.group("name"));
+        });
+
+        System.out.println("a");
         return "abc";
     }
 }

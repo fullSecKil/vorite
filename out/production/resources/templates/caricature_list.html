@@ -78,11 +78,11 @@
                                             Explorer 5.0
                                         </td>
                                         <td th:text="${caricature.level}">Win 95+</td>
-                                        <td th:text="${@genreCaricatureServiceImpl.selectById(caricature.genre).getGenre()}">
+                                        <td th:text="${@genreCaricatureServiceImpl.selectById(caricature.genre)?.getGenre()}">
                                             5
                                         </td>
                                         <td>
-                                            <a class="btn btn-small"><i class="icon-eye-open"></i> View</a>
+                                            <a class="btn btn-small"><i class="icon-eye-open"></i>View</a>
                                             <a class="btn btn-primary btn-small"
                                                th:onclick="| javascript:onclickPictureEdit(${caricature.id}) |"
                                                data-toggle="modal"
