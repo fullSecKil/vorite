@@ -52,6 +52,9 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter-mail')
     // redis
     implementation('org.springframework.boot:spring-boot-starter-data-redis')
+    // io 解压
+    implementation('commons-io:commons-io:2.6')
+    implementation('org.apache.commons:commons-compress:1.18')
     compileOnly('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }

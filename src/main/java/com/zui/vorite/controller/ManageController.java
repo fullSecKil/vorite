@@ -8,20 +8,26 @@ import com.zui.vorite.service.CaricatureService;
 import com.zui.vorite.service.GenreCaricatureService;
 import com.zui.vorite.service.OperationLogService;
 import com.zui.vorite.service.UserService;
+import com.zui.vorite.tools.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.util.StringValueResolver;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -103,7 +109,7 @@ public class ManageController {
         // 存入cache
         userService.cachePutPassward(userCaricature.getEmail(), userCaricature.getPassword());
 
-        Optional.ofNullable(file).filter(f-> !f.isEmpty()).map(MultipartFile::getOriginalFilename).ifPresent(n -> userCaricature.setHeader(UPLOAD_PATH + n));
+        Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(MultipartFile::getOriginalFilename).ifPresent(n -> userCaricature.setHeader(UPLOAD_PATH + n));
         userCaricature.setPassword(passwordEncoder.encode(userCaricature.getPassword()));
         int a = userService.insertOrUpdate(userCaricature);
         return "redirect:/caricature/manage/user_list";
@@ -126,6 +132,7 @@ public class ManageController {
 
     /**
      * 漫画list
+     *
      * @param model
      * @return
      */
@@ -139,6 +146,7 @@ public class ManageController {
 
     /**
      * 漫画添加
+     *
      * @param caricature
      * @return
      */
@@ -153,6 +161,7 @@ public class ManageController {
 
     /**
      * picture编辑
+     *
      * @param id
      * @return
      */
@@ -167,32 +176,34 @@ public class ManageController {
 
     /**
      * picture 删除拦截
+     *
      * @param id
      * @return
      */
     @GetMapping(value = "/picture_del/{id}")
-    public String pictureDel(@PathVariable("id") Long id){
+    public String pictureDel(@PathVariable("id") Long id) {
         caricatureService.caricatureDel(id);
         return "redirect:/caricature/manage/picture_list";
     }
 
     /**
      * 打印出操作
+     *
      * @param model
      * @return
      */
     @GetMapping(value = "/action_list")
-    public String actionList(Model model){
+    public String actionList(Model model) {
         List<OperationLog> operationLog = operationLogService.seleteAll();
         model.addAttribute(operationLog);
         return "action_list";
     }
 
     @GetMapping(value = "/caricature_form")
-    public String caricatureForm(Model model, @Value("#{genreCaricatureServiceImpl.selectAll()}") List<GenreCaricature> genreCaricatureServiceList){
+    public String caricatureForm(Model model, @Value("#{genreCaricatureServiceImpl.selectAll()}") List<GenreCaricature> genreCaricatureServiceList) {
         List<Caricature> caricatureList = caricatureService.selectAll();
         Map<String, Long> caricatureNameMap = caricatureList.stream().collect(Collectors.toMap(Caricature::getName, Caricature::getId, (key1, key2) -> key2));
-        Map<Long, String> genreCaricatureServiceNameMap= genreCaricatureServiceList.stream().collect(Collectors.toMap(GenreCaricature::getId, GenreCaricature::getGenre));
+        Map<Long, String> genreCaricatureServiceNameMap = genreCaricatureServiceList.stream().collect(Collectors.toMap(GenreCaricature::getId, GenreCaricature::getGenre));
 
         model.addAttribute("caricatureNameMap", caricatureNameMap);
         model.addAttribute("genreCaricatureServiceNameMap", genreCaricatureServiceNameMap);
@@ -201,18 +212,46 @@ public class ManageController {
     }
 
     @PostMapping(value = "/caricature_form")
-    public String caricaturePut(@RequestPart("fileCaracture") MultipartFile file, @Validated Caricature caricature){
+    public String caricaturePut(@RequestPart("fileCaracture") MultipartFile file, @Validated Caricature caricature) {
         // 稍后处理
         Caricature caricature1 = caricature;
         String regEx = "^(?<id>\\d+)-(?<name>.*)$";
         Pattern pattern = Pattern.compile(regEx);
 
-        Optional.ofNullable(caricature1.getName()).map(n->pattern.matcher(n)).filter(Matcher::matches).ifPresent(m->{
+        Optional.ofNullable(caricature1.getName()).map(n -> pattern.matcher(n)).filter(Matcher::matches).ifPresent(m -> {
             caricature1.setId(Long.parseUnsignedLong(m.group("id")));
             caricature1.setName(m.group("name"));
+            Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(f -> file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf("."))).ifPresent(n -> caricature1.setUrl(UPLOAD_PATH + "caricature\\upload\\" + caricature1.getName() + File.separator + n));
+
+            Predicate<Integer> p = (result) -> {
+                return result > 0;
+            };
+
+            if (p.test(caricatureService.insertOrUpdate(caricature1))) {
+                new Thread(() -> {
+                    FileUpload fileUpload = caricatureFile -> {
+                        try {
+                            File saveDir = new File(caricature1.getUrl());
+                            // 路径不存在追加
+                            if (!saveDir.exists()) {
+                                saveDir.mkdirs();
+                            }
+                            caricatureFile.transferTo(new File(caricature1.getUrl() + File.separator + file.getOriginalFilename()));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    };
+                    fileUpload.upload(file);
+                }).start();
+/*                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }*/
+            }
+
         });
 
-        System.out.println("a");
-        return "abc";
+        return "redirect:/caricature/manage/picture_list";
     }
 }
