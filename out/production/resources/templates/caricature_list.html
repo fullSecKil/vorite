@@ -55,9 +55,7 @@
                                         <th>创建时间</th>
                                         <th>更新时间</th>
                                         <th>标题</th>
-                                        <th>超链接</th>
                                         <th>收藏</th>
-                                        <th>描述</th>
                                         <th>集数</th>
                                         <th>种类</th>
                                         <th>操作</th>
@@ -72,9 +70,7 @@
                                         </td>
                                         <td th:text="${#dates.format(caricature.updateTime, 'yyyy-MM-dd')}">Win 95+</td>
                                         <td th:text="${caricature.title}"> 4</td>
-                                        <td th:text="${caricature.url}">X</td>
                                         <td th:text="${caricature.star}">Trident</td>
-                                        <td th:text="${caricature.message}">Internet
                                             Explorer 5.0
                                         </td>
                                         <td th:text="${caricature.level}">Win 95+</td>
@@ -108,10 +104,11 @@
                     </div>
                 </div>
 
+
                 <!-- /block -->
                 <div class="modal fade" id="caricatureCreateModal" tabindex="-1" role="dialog"
                      aria-labelledby="myModalLabel"
-                     aria-hidden="true">
+                     aria-hidden="true" style="display: none;">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -183,9 +180,11 @@
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
+
             </div>
         </div>
     </div>
+
     <hr>
     <footer>
         <div th:replace="tags/component :: footer"></div>
