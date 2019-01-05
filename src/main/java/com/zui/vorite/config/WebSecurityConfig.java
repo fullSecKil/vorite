@@ -15,6 +15,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
  *  认证配置
  * @author Dusk
  */
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -29,12 +30,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //leader, admin权限
                 .hasAnyRole("LEADER", "SUPER_ADMIN")
                 .anyRequest().authenticated().and()
-                .formLogin().loginPage("/login")
+                .formLogin()
                 .usernameParameter("username").passwordParameter("password")
+                .loginPage("/caricature/manage/login")
+                .loginProcessingUrl("/login/form")
                 .defaultSuccessUrl("/caricature/manage")
-                .failureUrl("/login?error")
+                .failureUrl("/caricature/manage/login?error")
                 .permitAll()
                 .and().logout()
+                // 退出成功之后，浏览器需要重定向
+                .logoutSuccessUrl("/caricature/manage/login?logout")
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .permitAll()        // 注销行为任意访问
                 .and().rememberMe().tokenValiditySeconds(2419200)

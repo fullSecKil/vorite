@@ -54,7 +54,6 @@
                                         <th>ID</th>
                                         <th>姓名</th>
                                         <th>邮箱</th>
-                                        <th>头像</th>
                                         <th>创建时间</th>
                                         <th>收藏</th>
                                         <th>操作</th>
@@ -67,11 +66,10 @@
                                             Explorer 4.0
                                         </td>
                                         <td th:text="${user.email}">Win 95+</td>
-                                        <td th:text="${user.header}">X</td>
                                         <td th:text="${#dates.format(user.createTime, 'yyyy-MM-dd')}">2018-12-01</td>
                                         <td th:text="${user.collection}"></td>
                                         <td>
-                                            <a class="btn btn-small"><i class="icon-eye-open"></i> View</a>
+                                            <a class="btn btn-small" th:onclick="| javascript:onclickUserHeader(${user.id}) |" data-toggle="modal" data-target="#headerModal"><i class="icon-eye-open"></i> View</a>
                                             <a class="btn btn-primary btn-small"
                                                th:onclick="| javascript:onclickUserEdit(${user.id}) |" data-toggle="modal"
                                                data-target="#userCreateModal"><i
@@ -156,7 +154,7 @@
                                             <label class="control-label"></label>
                                             <div class="controls">
                                                 <input class="input-large uneditable-input"
-                                                      id="id" name="id">
+                                                       id="id" name="id">
                                             </div>
                                         </div>
                                         <div class="form-actions">
@@ -170,6 +168,24 @@
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
 
+                <!-- 模态框（Modal） -->
+                <div class="modal fade" id="headerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">头像</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img id="userHeader" src="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
             </div>
         </div>
     </div>

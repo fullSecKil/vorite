@@ -8,12 +8,15 @@ import com.zui.vorite.service.CaricatureService;
 import com.zui.vorite.service.GenreCaricatureService;
 import com.zui.vorite.service.OperationLogService;
 import com.zui.vorite.service.UserService;
+import com.zui.vorite.tools.ExtractZip;
 import com.zui.vorite.tools.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.ClassUtils;
+import org.springframework.util.ResourceUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.util.StringValueResolver;
 import org.springframework.validation.annotation.Validated;
@@ -21,7 +24,9 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +47,9 @@ public class ManageController {
 
     @Value("${spring.servlet.multipart.location}")
     private String UPLOAD_PATH;
+
+    @Value("${global.images.header-url}")
+    private String HEADER_PATH;
 
     private BCryptPasswordEncoder passwordEncoder;
 
@@ -69,6 +77,11 @@ public class ManageController {
     @Autowired
     void setOperationLogService(OperationLogService operationLogService) {
         this.operationLogService = operationLogService;
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
     }
 
     @GetMapping
@@ -103,14 +116,28 @@ public class ManageController {
      */
     @Validated
     @PostMapping(value = "/user_form")
-    public String userCreate(@RequestPart("profilePicture") MultipartFile file, @Validated User user) {
+    public String userCreate(@RequestPart("profilePicture") MultipartFile file, @Validated User user) throws IOException {
 
         User userCaricature = user;
         // 存入cache
         userService.cachePutPassward(userCaricature.getEmail(), userCaricature.getPassword());
 
-        Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(MultipartFile::getOriginalFilename).ifPresent(n -> userCaricature.setHeader(UPLOAD_PATH + n));
+        Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(MultipartFile::getOriginalFilename).ifPresent(n -> userCaricature.setHeader(HEADER_PATH + File.separator + n));
+
+        // 取出项目根目录
+
+        File path = new File(ResourceUtils.getURL("classpath:").getPath());
+
+        File upload = new File(path.getAbsolutePath(), MessageFormat.format("{0}{1}", "static", HEADER_PATH));
+
+        if (!upload.exists()) {
+            upload.mkdirs();
+        }
+        // 写入userheader目录
+        file.transferTo(new File(upload + File.separator  + file.getOriginalFilename()));
+
         userCaricature.setPassword(passwordEncoder.encode(userCaricature.getPassword()));
+        userCaricature.setPassword(userCaricature.getPassword());
         int a = userService.insertOrUpdate(userCaricature);
         return "redirect:/caricature/manage/user_list";
     }
@@ -211,6 +238,16 @@ public class ManageController {
         return "caracture_form";
     }
 
+    @Autowired
+    ExtractZip extractZip;
+
+    /**
+     * caricature表单上传， file的上传
+     *
+     * @param file
+     * @param caricature
+     * @return
+     */
     @PostMapping(value = "/caricature_form")
     public String caricaturePut(@RequestPart("fileCaracture") MultipartFile file, @Validated Caricature caricature) {
         // 稍后处理
@@ -221,7 +258,7 @@ public class ManageController {
         Optional.ofNullable(caricature1.getName()).map(n -> pattern.matcher(n)).filter(Matcher::matches).ifPresent(m -> {
             caricature1.setId(Long.parseUnsignedLong(m.group("id")));
             caricature1.setName(m.group("name"));
-            Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(f -> file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf("."))).ifPresent(n -> caricature1.setUrl(UPLOAD_PATH + "caricature\\upload\\" + caricature1.getName() + File.separator + n));
+            Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(f -> file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf("."))).ifPresent(n -> caricature1.setUrl(UPLOAD_PATH + "/images/userheader/" + caricature1.getName() + File.separator + n));
 
             Predicate<Integer> p = (result) -> {
                 return result > 0;
@@ -242,15 +279,15 @@ public class ManageController {
                         }
                     };
                     fileUpload.upload(file);
+                    Map<String, String> fileMap = new HashMap<>(2);
+                    fileMap.put("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
+                    fileMap.put(caricature1.getUrl() + File.separator + file.getOriginalFilename(), caricature1.getUrl());
+                    extractZip.unZip(fileMap);
                 }).start();
-/*                try {
-                    Thread.sleep(20);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }*/
             }
 
         });
+        // extractZip.unZip(caricature1.getUrl() + File.separator + file.getOriginalFilename(), caricature1.getUrl());
 
         return "redirect:/caricature/manage/picture_list";
     }

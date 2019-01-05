@@ -90,11 +90,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ManageController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="253" lean-forward="true" selection-start-line="253" selection-end-line="253" />
+            <state relative-caret-position="252">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2562#2563#0" expanded="true" />
+                <element signature="e#2592#2593#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/impl/UserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRegisterAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,58 +125,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="caricature_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/caricature_list.html">
+      <file leaf-file-name="MailHandle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/help/handle/MailHandle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="110" column="63" lean-forward="true" selection-start-line="110" selection-start-column="63" selection-end-line="110" selection-end-column="63" />
+            <state relative-caret-position="-16">
+              <caret line="31" column="63" lean-forward="true" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebLogAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/WebLogAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="508">
+              <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#6392#6399#1" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1138#1139#0" expanded="true" />
+                <element signature="e#1186#1187#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="action_list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/action_list.html">
+      <file leaf-file-name="application-dev.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+            <state relative-caret-position="271">
+              <caret line="70" column="41" lean-forward="true" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_list.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user_list.html">
+      <file leaf-file-name="FileUpload.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/FileUpload.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="99" column="63" lean-forward="true" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tags/component.html">
+      <file leaf-file-name="StreamUnZip.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/StreamUnZip.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="118" column="36" lean-forward="true" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
-              <folding>
-                <element signature="n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ExtractZip.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/ExtractZip.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state relative-caret-position="336">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,11 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoriteApplicationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/zui/vorite/VoriteApplicationTests.java">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+            <state relative-caret-position="176">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -196,6 +213,10 @@
       <find>onclickPictureEdit</find>
       <find>file</find>
       <find>insertOrUpdate</find>
+      <find>onclickUserEdit</find>
+      <find>picture_form</find>
+      <find>location</find>
+      <find>multipart</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -489,7 +510,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="6171751645284" />
+        <entry key="$PROJECT_DIR$" value="6173419594870" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="912416352" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1613248354" />
@@ -620,12 +641,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/VoriteApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/assets/scripts.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/details/CustomUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/config/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/service/CaricatureService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/service/impl/CaricatureServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/genreCaricature.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/dao/CaricatureMapper.java" />
@@ -637,7 +652,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectJ/UserRegisterAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/help/handle/Handle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/help/mailsend/Send.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/global/assets/scripts.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/email_template.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/help/handle/MailHandle.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/email.html" />
@@ -645,8 +659,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/help/mailsend/SendMail.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/emailTemplate.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yaml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/help/page/DataGrid.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/GenreCaricature.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/dao/OperationLogMapper.java" />
@@ -657,20 +669,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/WebLogAspect.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/form.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/action_list.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/Caricature.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/caracture_form.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/Impl/CaricatureUpload.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/FileUpload.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/CaricatureUpload.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zui/vorite/VoriteApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/ExtractZip.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/tags/component.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/caricature_list.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/StreamUnZip.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zui/vorite/VoriteApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/caracture_form.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ContentController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/global/assets/scripts.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/user_list.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/ExtractZip.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0b8bc8c8-2329-4c34-a04e-9ccaf86f2000/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/config/PasswordEncoderConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/details/CustomUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yaml" />
       </list>
     </option>
   </component>
@@ -692,11 +713,11 @@
       <path value="$PROJECT_DIR$/src/main/resources/static/global/vendors/jquery-validation/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="267" />
-    <option name="y" value="167" />
-    <option name="width" value="1489" />
-    <option name="height" value="955" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="152" />
+    <option name="y" value="237" />
+    <option name="width" value="1800" />
+    <option name="height" value="975" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -704,8 +725,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -716,78 +735,65 @@
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vorite" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
               <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vorite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vorite" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vorite" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="global" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="userheader" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -803,19 +809,20 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../indeaApp/springboot-study/user_informanage" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\springboottest\formaybast\springstayle\vorite\src\main\resources\static\assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\springboottest\formaybast\springstayle\vorite\src\main\resources\static\global" />
       <recent name="D:\springboottest\formaybast\springstayle\vorite\src\main\resources\static\js" />
       <recent name="D:\springboottest\formaybast\springstayle\vorite\src\main\resources\templates\tags" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\springboottest\formaybast\springstayle\vorite\src\main\resources\static\global\images\userheader" />
+      <recent name="D:\springboottest\formaybast\springstayle\vorite\src\main\resources\static\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1058,102 +1065,120 @@
       <workItem from="1544705608993" duration="9319000" />
       <workItem from="1544790462212" duration="7724000" />
       <workItem from="1544883513556" duration="1520000" />
-      <workItem from="1544935056472" duration="21607000" />
+      <workItem from="1544935056472" duration="22455000" />
+      <workItem from="1545051728866" duration="5983000" />
+      <workItem from="1545142019989" duration="5886000" />
+      <workItem from="1545228713339" duration="1537000" />
+      <workItem from="1545396886977" duration="686000" />
+      <workItem from="1545486464991" duration="602000" />
+      <workItem from="1545545197662" duration="594000" />
+      <workItem from="1545564903022" duration="595000" />
+      <workItem from="1545653470425" duration="664000" />
+      <workItem from="1545747858774" duration="630000" />
+      <workItem from="1545827121207" duration="605000" />
+      <workItem from="1545912246916" duration="598000" />
+      <workItem from="1545995540414" duration="1099000" />
+      <workItem from="1546063904458" duration="672000" />
+      <workItem from="1546432565754" duration="387000" />
+      <workItem from="1546518958840" duration="733000" />
+      <workItem from="1546520048194" duration="1208000" />
+      <workItem from="1546602010909" duration="26588000" />
+      <workItem from="1546695890273" duration="5678000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 13h 58m 13s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 13h 59m 02s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 14h 05m 54s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 14h 06m 58s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 14h 13m 32s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 14h 16m 10s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 14h 17m 23s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="VoriteApplicationTests_logServiceTest - 2018.12.05 at 14h 20m 24s.xml">
-      <configuration name="VoriteApplicationTests.logServiceTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.16 at 20h 17m 30s.xml">
       <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.16 at 20h 19m 45s.xml">
       <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.17 at 22h 37m 49s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.17 at 22h 40m 06s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.17 at 22h 41m 15s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.17 at 22h 45m 10s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.18 at 23h 34m 28s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.18 at 23h 35m 41s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.18 at 23h 36m 20s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="VoriteApplicationTests_unZIpTest - 2018.12.18 at 23h 36m 51s.xml">
+      <configuration name="VoriteApplicationTests.unZIpTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317169000" />
+    <option name="totallyTimeSpent" value="372762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="sbt" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.5007236" side_tool="true" weight="0.32472324" />
       <window_info anchor="right" id="Maven Projects" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="2" />
       <window_info anchor="bottom" id="Docker" order="9" />
-      <window_info anchor="bottom" id="Build" order="14" weight="0.28997868" />
-      <window_info anchor="right" id="Database" order="6" weight="0.19839142" />
+      <window_info anchor="right" id="Database" order="6" weight="0.17235772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39594844" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.77424026" visible="true" weight="0.36041358" />
       <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.19202363" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.13284133" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.24815361" />
       <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4992764" weight="0.40405905" />
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21447721" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19638069" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
-      <window_info anchor="bottom" id="Problems" order="18" />
+      <window_info anchor="bottom" id="Problems" order="18" weight="0.32933104" />
       <window_info anchor="right" id="Bean Validation" order="10" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.2983752" />
-      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.16286863" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.1621984" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection Results" order="19" weight="0.31610045" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Database Console" order="0" weight="0.31314623" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.30871493" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="14" weight="0.28856623" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" anchor="bottom" id="Build" order="14" visible="true" weight="0.22599705" />
+      <window_info anchor="bottom" id="Build" order="14" visible="true" weight="0.28856623" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="sbt" order="4" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="7" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="0" visible="true" weight="0.31314623" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.338257" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.30890054" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.33030853" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="UI Designer" order="4" />
+      <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Docker" order="9" />
@@ -1161,20 +1186,19 @@
       <window_info anchor="bottom" id="Inspection Results" order="19" weight="0.31610045" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.29246676" />
-      <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Problems" order="18" />
+      <window_info anchor="right" id="Database" order="6" weight="0.20855615" />
+      <window_info anchor="bottom" id="Problems" order="18" weight="0.32933104" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Maven Projects" order="11" />
-      <window_info anchor="right" id="Gradle" order="7" weight="0.17075665" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.211126" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.19839142" />
+      <window_info active="true" anchor="right" id="Gradle" order="7" visible="true" weight="0.25668448" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2223071" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.13884786" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1182,7 +1206,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.2983752" />
       <window_info anchor="right" id="Bean Validation" order="10" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.31019202" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.30428362" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1232,13 +1256,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java</url>
-          <line>63</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java</url>
-          <line>64</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="65" />
         </line-breakpoint>
@@ -1250,31 +1274,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
-          <line>112</line>
+          <line>138</line>
           <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
-          <line>216</line>
+          <line>253</line>
           <properties />
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
-          <line>107</line>
-          <properties />
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
-          <line>220</line>
+          <line>257</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
-          <line>229</line>
+          <line>266</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
@@ -1284,11 +1302,35 @@
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
+          <line>183</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
+          <line>136</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="83" />
+      <option name="time" value="92" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1303,11 +1345,17 @@
         <watch expression="isAction" language="JAVA" />
         <watch expression="isAction" language="JAVA" />
         <watch expression="caricatureMapper::existsWithPrimaryKey" language="JAVA" />
+        <watch expression="file.getOriginalFilename()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>file.getOriginalFilename()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>caricatureMapper::existsWithPrimaryKey</expression-string>
         <language-id>JAVA</language-id>
@@ -1351,259 +1399,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/OperationLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-583">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1886#1887#0" expanded="true" />
-            <element signature="e#1932#1933#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/help/page/DataGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/global/assets/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="212" column="20" lean-forward="true" selection-start-line="212" selection-start-column="20" selection-end-line="212" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="62" column="46" lean-forward="true" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/config/PasswordEncoderConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/impl/OperationLogServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="33" column="56" selection-start-line="33" selection-start-column="56" selection-end-line="33" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12160">
-          <caret line="806" column="13" selection-start-line="806" selection-start-column="13" selection-end-line="806" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/dao/CaricatureMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/GenreCaricature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/5.1.2.RELEASE/46958e45eee6f9b42790cad7ec61557913d4be37/spring-webmvc-5.1.2.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ResponseEntityExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="177" column="57" lean-forward="true" selection-start-line="177" selection-start-column="57" selection-end-line="177" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/config/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/global/assets/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1392">
-          <caret line="87" column="5" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://0b8bc8c8-2329-4c34-a04e-9ccaf86f2000/schema/my_caricature/table/genre_caricature">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/Caricature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://0b8bc8c8-2329-4c34-a04e-9ccaf86f2000/schema/my_caricature/table/caricature">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/OperationLogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/Impl/CaricatureUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/caracture_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="85" column="140" selection-start-line="85" selection-start-column="140" selection-end-line="85" selection-end-column="140" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#fieldset#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.2.RELEASE/4dec566dccc17e1973aada5847fcbf5ad01046e9/spring-core-5.1.2.RELEASE-sources.jar!/org/springframework/core/io/InputStreamSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1090">
-          <caret line="200" column="24" selection-start-line="200" selection-start-column="24" selection-end-line="200" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="95" column="35" selection-start-line="95" selection-start-column="35" selection-end-line="95" selection-end-column="35" />
-          <folding>
-            <element signature="e#3486#3487#0" expanded="true" />
-            <element signature="e#3544#3545#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.2.RELEASE/4dec566dccc17e1973aada5847fcbf5ad01046e9/spring-core-5.1.2.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="220" selection-start-line="220" selection-end-line="220" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.2.RELEASE/4755f79d2889bb9683b5ac3fa6a17160286df00f/spring-aop-5.1.2.RELEASE-sources.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="637" column="64" lean-forward="true" selection-start-line="637" selection-start-column="64" selection-end-line="637" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/tk.mybatis/mapper-base/1.0.0/b414544cbca3fd8c3c955332f21344ea3e8abe13/mapper-base-1.0.0-sources.jar!/tk/mybatis/mapper/common/base/update/UpdateByPrimaryKeySelectiveMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/tk.mybatis/mapper-base/1.0.0/b414544cbca3fd8c3c955332f21344ea3e8abe13/mapper-base-1.0.0-sources.jar!/tk/mybatis/mapper/common/base/select/ExistsWithPrimaryKeyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/CaricatureService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/FileUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1621,32 +1420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/WebLogAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/VoriteApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -1654,13 +1427,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/CaricatureUpload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/CaricatureUpload.java" />
     <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.2.RELEASE/4dec566dccc17e1973aada5847fcbf5ad01046e9/spring-core-5.1.2.RELEASE-sources.jar!/org/springframework/util/StreamUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1668,73 +1435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.2.RELEASE/7361b2e28910f2202851c14d4115435b248f668c/spring-web-5.1.2.RELEASE-sources.jar!/org/springframework/web/multipart/MultipartFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="130" column="9" selection-start-line="130" selection-start-column="9" selection-end-line="130" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zui/vorite/VoriteApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/ExtractZip.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="253" lean-forward="true" selection-start-line="253" selection-end-line="253" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tags/component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
+        <state relative-caret-position="1819">
           <caret line="118" column="36" lean-forward="true" selection-start-line="118" selection-start-column="36" selection-end-line="118" selection-end-column="36" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/caricature_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="110" column="63" lean-forward="true" selection-start-line="110" selection-start-column="63" selection-end-line="110" selection-end-column="63" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#6392#6399#1" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1745,12 +1449,324 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.2.RELEASE/7361b2e28910f2202851c14d4115435b248f668c/spring-web-5.1.2.RELEASE-sources.jar!/org/springframework/web/multipart/MultipartFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1138">
+          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/nio/channels/Channels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="122" column="70" lean-forward="true" selection-start-line="122" selection-start-column="70" selection-end-line="122" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/9.0.12/6ad708861bf197280cec9241c1ade032def91b91/tomcat-embed-core-9.0.12-sources.jar!/org/apache/tomcat/util/net/SocketProcessorBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zui/vorite/VoriteApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/Caricature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="97" column="18" selection-start-line="97" selection-start-column="18" selection-end-line="97" selection-end-column="18" />
+          <folding>
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2233#2234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/caricature_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="198" selection-start-line="198" selection-end-line="198" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-576" />
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0b8bc8c8-2329-4c34-a04e-9ccaf86f2000/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="99" column="63" lean-forward="true" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
+        <state relative-caret-position="228">
+          <caret line="41" column="70" lean-forward="true" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/caracture_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="68" column="161" selection-start-line="68" selection-start-column="161" selection-end-line="68" selection-end-column="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/global/assets/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="869">
+          <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.2.RELEASE/4755f79d2889bb9683b5ac3fa6a17160286df00f/spring-aop-5.1.2.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="745" selection-start-line="745" selection-end-line="745" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.2.RELEASE/4755f79d2889bb9683b5ac3fa6a17160286df00f/spring-aop-5.1.2.RELEASE-sources.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0b8bc8c8-2329-4c34-a04e-9ccaf86f2000/schema/my_caricature/table/operation_log">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ContentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/VoriteApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/details/CustomUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/config/PasswordEncoderConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/FileUploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-217">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/ExtractZip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="39" column="111" selection-start-line="39" selection-start-column="106" selection-end-line="39" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0b8bc8c8-2329-4c34-a04e-9ccaf86f2000/schema/my_caricature/table/user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/io/FileSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaDepandent/jdk-8u144/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="214" column="54" lean-forward="true" selection-start-line="214" selection-start-column="54" selection-end-line="214" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.2.RELEASE/4755f79d2889bb9683b5ac3fa6a17160286df00f/spring-aop-5.1.2.RELEASE-sources.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="632" selection-start-line="632" selection-end-line="632" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/5.1.2.RELEASE/4755f79d2889bb9683b5ac3fa6a17160286df00f/spring-aop-5.1.2.RELEASE-sources.jar!/org/springframework/aop/aspectj/AspectJAroundAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="33" column="76" selection-start-line="33" selection-start-column="76" selection-end-line="33" selection-end-column="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/resources/static/global/images/bg-input.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/StreamUnZip.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Compiler/gradle/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.1.2.RELEASE/4dec566dccc17e1973aada5847fcbf5ad01046e9/spring-core-5.1.2.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/classes/static/global/images/userheader/tiles.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/tools/FileUpload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="70" column="41" lean-forward="true" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/WebLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="71" column="26" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1138#1139#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/help/handle/MailHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="31" column="63" lean-forward="true" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/aspectj/UserRegisterAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="66" column="39" lean-forward="true" selection-start-line="66" selection-start-column="39" selection-end-line="66" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="58" column="112" selection-start-line="58" selection-start-column="112" selection-end-line="58" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/classes/static/global/images/userheadertiles.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zui/vorite/controller/ManageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#2592#2593#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1784,6 +1800,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>scala-sdk-2.13.0-M5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1807,11 +1824,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>vorite</last-edited>
+          <last-edited>vorite_main|vorite</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1831,7 +1849,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Gradle: ch.qos.logback:logback-classic:1.2.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

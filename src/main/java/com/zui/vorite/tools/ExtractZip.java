@@ -7,7 +7,10 @@ import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 import static org.springframework.util.StreamUtils.BUFFER_SIZE;
 
@@ -21,7 +24,7 @@ import static org.springframework.util.StreamUtils.BUFFER_SIZE;
 @Component
 public class ExtractZip {
 
-    public static List<String> unZip(File zipFile, String destDir){
+    private List<String> unZip(File zipFile, String destDir){
 
         List<String> fileNames = new ArrayList<>();
 
@@ -48,8 +51,15 @@ public class ExtractZip {
         return fileNames;
     }
 
-    public List<String> unZip(String zipfile, String destDir){
-        File zipFile = new File(zipfile);
-        return unZip(zipFile, destDir);
+    /**
+     * 压的文件，解压后路径
+     * @param files
+     * @return
+     */
+    public List<List<String>> unZip(Map<String, String> files){
+        // String zipfile, String destDir
+        Map<String, String> fileMap = files;
+        List<List<String>> list = fileMap.entrySet().parallelStream().map(f->unZip(new File(f.getKey()), f.getValue())).collect(Collectors.toList());
+        return list;
     }
 }

@@ -7,7 +7,8 @@ spring:
     multipart:
       enabled: true
       # location:  /root/uploadFiles/
-      location: E:\\download\\
+      # /global
+      location: E:/download
       max-file-size: 1048576
       max-request-size: 10485760
   # druid连接池
@@ -39,6 +40,9 @@ spring:
     password: VisT2iiLc
     # 连接超时
     timeout: 10000
+  resources:
+  #设置静态资源路径，多个以逗号分隔
+    static-locations:  classpath:static/,file:static/
 
 # mybatis日志
 logging:
@@ -61,3 +65,7 @@ pagehelper:
   params: count
   reasonable: true
   support-methods-arguments: true
+
+global:
+  images:
+    header-url: /global/images/userheader

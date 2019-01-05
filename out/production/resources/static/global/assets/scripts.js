@@ -67,6 +67,7 @@ function onclickUserEdit(userId) {
         return;
     }
 
+
      $.ajax({
          url: '/caricature/manage/user_edit',
          type: 'GET',
@@ -80,6 +81,28 @@ function onclickUserEdit(userId) {
             $('#selectRoles').val(user.roles)
          }
      });
+}
+
+
+function onclickUserHeader(id) {
+    console.info(id)
+    if($.isEmptyObject(id)){
+        console.info("我最帅");
+
+        $.ajax({
+            url: '/caricature/manage/user_header',
+            type: 'GET',
+            data: {'id': id},
+            dataType: 'json',
+            success: function (result) {
+                var user = result.user;
+                console.info(user);
+                document.getElementById("myModalLabel").textContent = user.username + "(头像)";
+                document.getElementById("userHeader").src = user.header;
+                // $('#userHeader').src(user.header);
+            }
+        });
+    }
 }
 
 function onclickPictureEdit(pictureId) {

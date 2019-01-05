@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 /**
  * @author Dusk
  */
+
 @Service
 public class CustomUserService implements UserDetailsService {
 

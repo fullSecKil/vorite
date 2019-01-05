@@ -14,7 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -47,8 +49,12 @@ public class VoriteApplicationTests {
 
     @Test
     public void unZIpTest(){
-        List<String> names = extractZip.unZip("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
+        Map<String, String> fileMap = new HashMap<>();
+        fileMap.put("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
+        fileMap.put("E:\\download\\caricature\\upload\\一拳超人\\特别篇.zip", "E:\\download\\caricature\\upload\\一拳超人");
+
+        // List<String> names = extractZip.unZip("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
+        System.out.println(extractZip.unZip(fileMap));
         log.info("-------------------------->");
-        System.out.println(names);
     }
 }
