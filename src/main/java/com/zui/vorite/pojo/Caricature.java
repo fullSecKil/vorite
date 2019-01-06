@@ -1,6 +1,5 @@
 package com.zui.vorite.pojo;
 
-import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;
@@ -32,6 +31,7 @@ public class Caricature implements Serializable {
     private Timestamp createTime;
     private Timestamp updateTime;
     private String title;
+    private String path;
     private String url;
     private Integer star;
     private String message;
@@ -42,11 +42,12 @@ public class Caricature implements Serializable {
     public Caricature() {
     }
 
-    public Caricature(@NotBlank(message = "漫画名不能为空") String name, Timestamp createTime, Timestamp updateTime, String title, String url, Integer star, String message, Integer level, Integer genre, Boolean isAction) {
+    public Caricature(@NotBlank(message = "漫画名不能为空") String name, Timestamp createTime, Timestamp updateTime, String title, String path,String url, Integer star, String message, Integer level, Integer genre, Boolean isAction) {
         this.name = name;
         this.createTime = createTime;
         this.updateTime = updateTime;
         this.title = title;
+        this.path = path;
         this.url = url;
         this.star = star;
         this.message = message;
@@ -93,6 +94,14 @@ public class Caricature implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 
     public String getUrl() {
@@ -151,6 +160,7 @@ public class Caricature implements Serializable {
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 ", title='" + title + '\'' +
+                ", path='" + path + '\'' +
                 ", url='" + url + '\'' +
                 ", star=" + star +
                 ", message='" + message + '\'' +

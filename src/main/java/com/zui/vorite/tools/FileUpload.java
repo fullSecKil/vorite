@@ -10,6 +10,8 @@ package com.zui.vorite.tools;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+
 /**
  * 文件上传的接口
  * @author Dusk
@@ -18,5 +20,5 @@ public interface FileUpload {
     /**
      * 上传
      */
-    void upload(MultipartFile file);
+    void upload(MultipartFile file, File fileDir);
 }

@@ -23,14 +23,12 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.swing.text.html.Option;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.MessageFormat;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Matcher;
@@ -85,7 +83,20 @@ public class ManageController {
     }
 
     @GetMapping
-    public String index() {
+    public String index(Model model) {
+        List<Caricature> caricatureList = caricatureService.selectAll();
+        /*
+        * caricatureList.stream().filter(c-> !StringUtils.isEmpty(c.getPath())).map(c-> {
+            try {
+                return Optional.of(new File(ResourceUtils.getURL("classpath:").getPath(), "static" + c.getPath()));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            return Optional.empty();
+        }).filter(p->p.isPresent()).map(p->p.get().toString()).map(p -> p + File.separator + new File(p).getName() + ".jpg").collect(Collectors.toList());*/
+        List<String> cList= caricatureList.stream().filter(c->!StringUtils.isEmpty(c.getPath())).map(c-> MessageFormat.format("{0}/{1}.jpg", c.getPath(), c.getName())).collect(Collectors.toList());
+        System.out.println(cList);
+        model.addAttribute("caricatureList", cList);
         return "index";
     }
 
@@ -182,6 +193,7 @@ public class ManageController {
     public String pictureCreate(@Validated Caricature caricature) {
 
         Caricature picture = caricature;
+        Optional.ofNullable(picture.getName()).ifPresent(n->picture.setPath("/global/caricature/upload/" + n));
         int a = caricatureService.insertOrUpdate(picture);
         return "redirect:/caricature/manage/picture_list";
     }
@@ -249,16 +261,18 @@ public class ManageController {
      * @return
      */
     @PostMapping(value = "/caricature_form")
-    public String caricaturePut(@RequestPart("fileCaracture") MultipartFile file, @Validated Caricature caricature) {
+    public String caricaturePut(@RequestPart("fileCaracture") MultipartFile file, @Validated Caricature caricature) throws FileNotFoundException {
         // 稍后处理
         Caricature caricature1 = caricature;
         String regEx = "^(?<id>\\d+)-(?<name>.*)$";
         Pattern pattern = Pattern.compile(regEx);
+        File path = new File(ResourceUtils.getURL("classpath:").getPath());
 
         Optional.ofNullable(caricature1.getName()).map(n -> pattern.matcher(n)).filter(Matcher::matches).ifPresent(m -> {
             caricature1.setId(Long.parseUnsignedLong(m.group("id")));
             caricature1.setName(m.group("name"));
-            Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(f -> file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf("."))).ifPresent(n -> caricature1.setUrl(UPLOAD_PATH + "/images/userheader/" + caricature1.getName() + File.separator + n));
+            // "/global/caricature/upload/" + caricature1.getName()
+            Optional.ofNullable(file).filter(f -> !f.isEmpty()).map(f -> file.getOriginalFilename().substring(0, file.getOriginalFilename().lastIndexOf("."))).ifPresent(n -> caricature1.setUrl("/global/caricature/upload/" + caricature1.getName() + File.separator + n));
 
             Predicate<Integer> p = (result) -> {
                 return result > 0;
@@ -266,22 +280,23 @@ public class ManageController {
 
             if (p.test(caricatureService.insertOrUpdate(caricature1))) {
                 new Thread(() -> {
-                    FileUpload fileUpload = caricatureFile -> {
+                    FileUpload fileUpload = (caricatureFile, saveDir) -> {
                         try {
-                            File saveDir = new File(caricature1.getUrl());
                             // 路径不存在追加
                             if (!saveDir.exists()) {
                                 saveDir.mkdirs();
                             }
-                            caricatureFile.transferTo(new File(caricature1.getUrl() + File.separator + file.getOriginalFilename()));
+                            // File.separator
+                            caricatureFile.transferTo(new File(saveDir.getAbsolutePath(), file.getOriginalFilename()));
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     };
-                    fileUpload.upload(file);
+                    File saveDir = new File(path.getAbsolutePath(), MessageFormat.format("{0}{1}", "static", caricature1.getUrl()));
+                    fileUpload.upload(file, saveDir);
                     Map<String, String> fileMap = new HashMap<>(2);
                     fileMap.put("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
-                    fileMap.put(caricature1.getUrl() + File.separator + file.getOriginalFilename(), caricature1.getUrl());
+                    fileMap.put(saveDir.getAbsolutePath() + File.separator + file.getOriginalFilename(), saveDir.getAbsolutePath());
                     extractZip.unZip(fileMap);
                 }).start();
             }
