@@ -202,7 +202,7 @@ public class ManageController {
             if (!upload.exists()) {
                 upload.mkdirs();
             }
-            file.transferTo(new File(upload + File.separator  + "a.jpg"));
+            file.transferTo(new File(upload + File.separator  + picture.getName()+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("/")+1)));
             file.getOriginalFilename();
         }
         int a = caricatureService.insertOrUpdate(picture);
