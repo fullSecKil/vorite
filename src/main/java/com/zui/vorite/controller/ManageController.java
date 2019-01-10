@@ -190,10 +190,21 @@ public class ManageController {
      */
     @Validated
     @PostMapping(value = "/picture_form")
-    public String pictureCreate(@Validated Caricature caricature) {
+    public String pictureCreate(@RequestPart("cover") MultipartFile file, @Validated Caricature caricature) throws IOException {
+
+        System.out.println();
 
         Caricature picture = caricature;
         Optional.ofNullable(picture.getName()).ifPresent(n->picture.setPath("/global/caricature/upload/" + n));
+        if(!file.isEmpty()){
+            File path = new File(ResourceUtils.getURL("classpath:").getPath());
+            File upload = new File(path.getAbsolutePath(), MessageFormat.format("{0}{1}", "static", picture.getPath()));
+            if (!upload.exists()) {
+                upload.mkdirs();
+            }
+            file.transferTo(new File(upload + File.separator  + "a.jpg"));
+            file.getOriginalFilename();
+        }
         int a = caricatureService.insertOrUpdate(picture);
         return "redirect:/caricature/manage/picture_list";
     }
