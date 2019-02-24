@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/global/assets/index.css" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/global/assets/index.css" charset="GB2312" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/global/assets/m.css" charset="GB2312" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

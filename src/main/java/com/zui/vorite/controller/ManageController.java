@@ -202,7 +202,8 @@ public class ManageController {
             if (!upload.exists()) {
                 upload.mkdirs();
             }
-            file.transferTo(new File(upload + File.separator  + picture.getName()+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("/")+1)));
+            // file.transferTo(new File(upload, picture.getName()+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("/")+1)));
+            file.transferTo(new File(upload, picture.getName()+file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."))));
             file.getOriginalFilename();
         }
         int a = caricatureService.insertOrUpdate(picture);
@@ -290,24 +291,26 @@ public class ManageController {
             };
 
             if (p.test(caricatureService.insertOrUpdate(caricature1))) {
+                File saveDirs = new File(path.getAbsolutePath(), MessageFormat.format("{0}{1}", "static", caricatureService.getCaricature(caricature1.getId()).getPath()));
+                // 路径不存在追加
+                if (!saveDirs.exists()) {
+                    saveDirs.mkdirs();
+                }
                 new Thread(() -> {
                     FileUpload fileUpload = (caricatureFile, saveDir) -> {
                         try {
-                            // 路径不存在追加
-                            if (!saveDir.exists()) {
-                                saveDir.mkdirs();
-                            }
                             // File.separator
-                            caricatureFile.transferTo(new File(saveDir.getAbsolutePath(), file.getOriginalFilename()));
+                            caricatureFile.transferTo(new File(saveDir.getAbsolutePath(), caricatureFile.getOriginalFilename()));
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                     };
-                    File saveDir = new File(path.getAbsolutePath(), MessageFormat.format("{0}{1}", "static", caricature1.getUrl()));
-                    fileUpload.upload(file, saveDir);
+                    // File saveDir = new File(path.getAbsolutePath(), MessageFormat.format("{0}{1}", "static", caricatureService.getCaricature(caricature1.getId()).getPath()));
+                    fileUpload.upload(file, saveDirs);
+
                     Map<String, String> fileMap = new HashMap<>(2);
-                    fileMap.put("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
-                    fileMap.put(saveDir.getAbsolutePath() + File.separator + file.getOriginalFilename(), saveDir.getAbsolutePath());
+                    // fileMap.put("E:\\download\\caricature\\upload\\一拳超人\\closing.zip", "E:\\download\\caricature\\upload\\一拳超人");
+                    fileMap.put(saveDirs.getAbsolutePath() + File.separator + file.getOriginalFilename(), saveDirs.getAbsolutePath());
                     extractZip.unZip(fileMap);
                 }).start();
             }

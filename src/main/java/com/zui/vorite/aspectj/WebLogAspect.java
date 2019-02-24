@@ -41,7 +41,7 @@ public class WebLogAspect {
         this.operationLog = operationLog;
     }
 
-    @Pointcut("execution(public * com.zui.vorite.controller..*.*(..))")
+    @Pointcut("execution(public * com.zui.vorite.controller..*.*(..)) && @annotation(org.springframework.web.bind.annotation.GetMapping)")
     public void webLog(){}
 
     /**
