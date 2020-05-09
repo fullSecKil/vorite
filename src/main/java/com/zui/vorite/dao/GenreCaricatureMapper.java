@@ -19,6 +19,6 @@ import java.util.List;
 public interface GenreCaricatureMapper extends BaseMapper<GenreCaricature> {
 
     @Select("select * from genre_caricature")
-    @Results({@Result(column="genre", property="genre"), @Result(column="genreDescribe",property="genre_describe"), @Result(property="caricatureList",  javaType = List.class, column="id", many=@Many(select = "com.zui.vorite.dao.CaricatureMapper.selectCaricatureByGenre"))})
+    @Results({@Result(column = "genre", property = "genre"), @Result(column = "genreDescribe", property = "genre_describe"), @Result(property = "caricatureList", javaType = List.class, column = "id", many = @Many(select = "com.zui.vorite.dao.CaricatureMapper.selectCaricatureByGenre"))})
     List<GenreCaricature> selectAllGenreCaricature();
 }

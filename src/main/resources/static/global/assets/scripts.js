@@ -119,11 +119,17 @@ function onclickPictureEdit(pictureId) {
             var caricature = result.caricature;
             $('#id').val(caricature.id);
             $('#name').val(caricature.name);
+            $('#author').val(caricature.author);
             $('#title').val(caricature.title);
             $('#url').val(caricature.url);
             $('#message').val(caricature.message);
             $('#title').val(caricature.title);
             $('#selectGenre').val(caricature.genre);
+            $("#isAction").prop("checked", caricature.isAction);
         }
     });
+}
+
+function onclickCaricatureCover(path) {
+    $("#coverCaricature").attr('src', path);
 }

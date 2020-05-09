@@ -2,10 +2,13 @@ package com.zui.vorite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * Æô¶¯Ïî
+ *
+ * @author Dusk
+ */
 @SpringBootApplication
-@ComponentScan
 public class VoriteApplication {
 
     public static void main(String[] args) {

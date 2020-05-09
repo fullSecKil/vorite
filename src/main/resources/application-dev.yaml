@@ -14,9 +14,11 @@ spring:
   # druid连接池
   datasource:
     druid:
+      # VisT2iiLc
       username: root
       password: 1997050812345Xr
-      url: jdbc:mysql:///my_caricature?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+      #url: jdbc:mysql:///my_caricature?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+      url: jdbc:mysql://localhost:3306/my_caricature?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
       driver-class-name: com.mysql.cj.jdbc.Driver
   rabbitmq:
     host: 47.98.186.6

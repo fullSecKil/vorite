@@ -7,7 +7,8 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.common.BaseMapper;
 
 /**
- *  集成模板，事务回滚
+ * 集成模板，事务回滚
+ *
  * @author Dusk
  */
 @Mapper
@@ -16,6 +17,7 @@ public interface UserMapper extends BaseMapper<User> {
 
     /**
      * 用户验证
+     *
      * @param username
      * @param password
      * @return

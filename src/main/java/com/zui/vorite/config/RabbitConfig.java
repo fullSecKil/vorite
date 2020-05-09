@@ -32,10 +32,10 @@ public class RabbitConfig {
         return new Queue(MANUAL_MAIL_QUEUE, true);
     }
 
-    @Bean
     /**
      *  交换机
      */
+    @Bean
     TopicExchange mailExchange(){
         return new TopicExchange(DEFAULT_MAIL_EXCHANGE);
     }

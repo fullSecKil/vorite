@@ -28,6 +28,7 @@ public class Caricature implements Serializable {
 
     @NotBlank(message = "漫画名不能为空")
     private String name;
+    private String author;
     private Timestamp createTime;
     private Timestamp updateTime;
     private String title;
@@ -42,8 +43,9 @@ public class Caricature implements Serializable {
     public Caricature() {
     }
 
-    public Caricature(@NotBlank(message = "漫画名不能为空") String name, Timestamp createTime, Timestamp updateTime, String title, String path,String url, Integer star, String message, Integer level, Integer genre, Boolean isAction) {
+    public Caricature(@NotBlank(message = "漫画名不能为空") String name, String author, Timestamp createTime, Timestamp updateTime, String title, String path,String url, Integer star, String message, Integer level, Integer genre, Boolean isAction) {
         this.name = name;
+        this.author = author;
         this.createTime = createTime;
         this.updateTime = updateTime;
         this.title = title;
@@ -66,6 +68,14 @@ public class Caricature implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public void setName(String name) {
@@ -157,6 +167,7 @@ public class Caricature implements Serializable {
         return "Caricature{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", author='" + author + '\'' +
                 ", createTime=" + createTime +
                 ", updateTime=" + updateTime +
                 ", title='" + title + '\'' +
@@ -169,4 +180,5 @@ public class Caricature implements Serializable {
                 ", isAction=" + isAction +
                 '}';
     }
+
 }

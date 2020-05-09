@@ -10,6 +10,7 @@ import java.util.List;
 
 /**
  * 操作日志
+ *
  * @file: OperationLogMapper.class
  * @author: Dusk
  * @since: 2018/12/5 11:16
@@ -21,6 +22,7 @@ public interface OperationLogMapper extends BaseMapper<OperationLog> {
 
     /**
      * 取出某个请求路径
+     *
      * @param url
      * @return
      */

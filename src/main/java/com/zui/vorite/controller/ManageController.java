@@ -35,11 +35,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.*;
+
 
 /**
  * @author Dusk
  */
-@Controller()
+@Controller
 @RequestMapping("/caricature/manage")
 public class ManageController {
 
@@ -94,9 +96,9 @@ public class ManageController {
             }
             return Optional.empty();
         }).filter(p->p.isPresent()).map(p->p.get().toString()).map(p -> p + File.separator + new File(p).getName() + ".jpg").collect(Collectors.toList());*/
-        List<String> cList= caricatureList.stream().filter(c->!StringUtils.isEmpty(c.getPath())).map(c-> MessageFormat.format("{0}/{1}.jpg", c.getPath(), c.getName())).collect(Collectors.toList());
-        System.out.println(cList);
-        model.addAttribute("caricatureList", cList);
+        // List<String> cList= caricatureList.stream().filter(c->!StringUtils.isEmpty(c.getPath())).map(c-> MessageFormat.format("{0}/{1}.jpg", c.getPath(), c.getName())).collect(Collectors.toList());
+        Map<Integer, Set<String>> CaricatureMap = caricatureList.stream().filter(c -> !StringUtils.isEmpty(c.getPath())).collect(groupingBy(Caricature::getGenre, mapping(c -> MessageFormat.format("{0}/{1}.jpg", c.getPath(), c.getName()), toSet())));
+        model.addAttribute("CaricatureMap", CaricatureMap);
         return "index";
     }
 
@@ -145,7 +147,13 @@ public class ManageController {
             upload.mkdirs();
         }
         // 写入userheader目录
-        file.transferTo(new File(upload + File.separator  + file.getOriginalFilename()));
+        Optional.ofNullable(file).filter(f -> !f.isEmpty()).ifPresent(f -> {
+            try {
+                f.transferTo(new File(upload + File.separator + file.getOriginalFilename()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
         userCaricature.setPassword(passwordEncoder.encode(userCaricature.getPassword()));
         userCaricature.setPassword(userCaricature.getPassword());
@@ -313,6 +321,9 @@ public class ManageController {
                     fileMap.put(saveDirs.getAbsolutePath() + File.separator + file.getOriginalFilename(), saveDirs.getAbsolutePath());
                     extractZip.unZip(fileMap);
                 }).start();
+                // 更新篇数
+                caricature1.setLevel(saveDirs.listFiles(File::isDirectory).length);
+                caricatureService.insertOrUpdate(caricature1);
             }
 
         });

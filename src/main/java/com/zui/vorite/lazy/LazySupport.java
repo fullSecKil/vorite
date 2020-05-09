@@ -13,7 +13,7 @@ public class LazySupport<T> {
         this.supplier = supplier;
     }
 
-    public T head(){
+    public T head() {
         return supplier.get();
     }
 }
