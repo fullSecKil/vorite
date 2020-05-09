@@ -24,7 +24,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="#">Admin Panel</a>
+                <a class="brand" href="#">少年_Jump后台</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav pull-right">
                         <li class="dropdown">
@@ -44,7 +44,7 @@
                     </ul>
                     <ul class="nav">
                         <li class="active">
-                            <a href="#">Dashboard</a>
+                            <a href="#">操作</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">设置 <b class="caret"></b>
@@ -52,66 +52,27 @@
                             </a>
                             <ul class="dropdown-menu" id="menu1">
                                 <li>
-                                    <a href="#">Tools <i class="icon-arrow-right"></i>
-
-                                    </a>
-                                    <ul class="dropdown-menu sub-menu">
-                                        <li>
-                                            <a href="#">Reports</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Logs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Errors</a>
-                                        </li>
-                                    </ul>
+                                    <a href="#" th:href="@{/caricature/manage/picture_list}">漫画管理</a>
                                 </li>
                                 <li>
-                                    <a href="#">漫画管理</a>
-                                </li>
-                                <li>
-                                    <a href="#">Other Link</a>
+                                    <a href="/" th:href="@{/}">返回首页</a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="#">成员管理</a>
+                                    <a href="#" th:href="@{/caricature/manage/user_list}">成员管理</a>
                                 </li>
                                 <li>
-                                    <a href="#">Other Link</a>
+                                    <a href="#" th:href="@{/caricature/manage/caricature_form}">漫画上传</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Content <i class="caret"></i>
-
+                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">用户 <i
+                                    class="caret"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a tabindex="-1" href="#">Blog</a>
-                                </li>
-                                <li>
-                                    <a tabindex="-1" href="#">News</a>
-                                </li>
-                                <li>
-                                    <a tabindex="-1" href="#">Custom Pages</a>
-                                </li>
-                                <li>
-                                    <a tabindex="-1" href="#">Calendar</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a tabindex="-1" href="#">FAQ</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">用户 <i class="caret"></i>
-
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a tabindex="-1" href="#">用户一览</a>
+                                    <a tabindex="-1" href="#" th:href="@{/caricature/manage/user_list}">用户一览</a>
                                 </li>
                                 <li>
                                     <a tabindex="-1" href="#">搜索</a>
@@ -137,49 +98,22 @@
                 <a href="index.html" th:href="@{/caricature/manage}"><i class="icon-chevron-right"></i>最新情报</a>
             </li>
             <li>
-                <a href="caricature_list.html" th:href="@{/caricature/manage/picture_list}"><i class="icon-chevron-right"></i>漫画一览</a>
+                <a href="caricature_list.html" th:href="@{/caricature/manage/picture_list}"><i
+                        class="icon-chevron-right"></i>漫画一览<span class="badge badge-success pull-right"
+                                                                 th:text="${@caricatureServiceImpl.selectAll().size()}">731</span></a>
             </li>
             <li>
-                <a href="user_list.html" th:href="@{/caricature/manage/user_list}"><i class="icon-chevron-right"></i>成员一览</a>
+                <a href="user_list.html" th:href="@{/caricature/manage/user_list}"><i class="icon-chevron-right"></i>成员一览<span
+                        class="badge badge-info pull-right"
+                        th:text="${@userServiceImpl.selectAll().size()}">27</span></a>
             </li>
             <li>
-                <a href="action_list.html" th:href="@{/caricature/manage/action_list}"><i class="icon-chevron-right"></i>操作日志</a>
+                <a href="action_list.html" th:href="@{/caricature/manage/action_list}"><i
+                        class="icon-chevron-right"></i>操作日志</a>
             </li>
             <li>
-                <a href="tables.html"><i class="icon-chevron-right"></i> Tables</a>
-            </li>
-            <li>
-                <a href="buttons.html" th:href="@{/caricature/manage/caricature_form}"><i class="icon-chevron-right"></i>漫画上传</a>
-            </li>
-            <li>
-                <a href="editors.html"><i class="icon-chevron-right"></i> WYSIWYG Editors</a>
-            </li>
-            <li>
-                <a href="interface.html"><i class="icon-chevron-right"></i> UI & Interface</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-success pull-right">731</span> Orders</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-success pull-right">812</span> Invoices</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-info pull-right">27</span> Clients</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-info pull-right">1,234</span> Users</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-info pull-right">2,221</span> Messages</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-info pull-right">11</span> Reports</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-important pull-right">83</span> Errors</a>
-            </li>
-            <li>
-                <a href="#"><span class="badge badge-warning pull-right">4,231</span> Logs</a>
+                <a href="buttons.html" th:href="@{/caricature/manage/caricature_form}"><i
+                        class="icon-chevron-right"></i>漫画上传</a>
             </li>
         </ul>
     </div>

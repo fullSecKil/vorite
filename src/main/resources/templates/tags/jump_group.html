@@ -11,35 +11,74 @@
 <div th:fragment="jp_header">
     <header>
         <div class="tophead">
-            <div class="logo"><a href="/">jump</a></div>
+            <div class="logo"><a href="/">少年_Jump</a></div>
             <div id="mnav">
                 <h2><span class="navicon"></span></h2>
                 <ul>
-                    <li><a href="index.html">网站首页</a></li>
-                    <li><a href="about.html">关于我</a></li>
-                    <li><a href="share.html">模板分享</a></li>
-                    <li><a href="list.html">学无止境</a></li>
-                    <li><a href="info.html">慢生活</a></li>
-                    <li><a href="gbook.html">留言</a></li>
+                    <li><a href="index.html" th:href="@{/visit/group}">网站首页</a></li>
+                    <li><a>漫画更新</a></li>
+                    <li><a>漫画排行</a></li>
+                    <li><a>全部分类</a></li>
+                    <li><a>日漫</a></li>
+                    <li><a th:href="@{/caricature/manage/login}">登录</a></li>
                 </ul>
             </div>
             <nav class="topnav" id="topnav">
                 <ul>
-                    <li><a href="index.html">网站首页</a></li>
-                    <li><a href="about.html">关于我</a></li>
-                    <li><a href="share.html">模板分享</a></li>
-                    <li><a href="list.html">学无止境</a></li>
-                    <li><a href="info.html">慢生活</a></li>
-                    <li><a href="gbook.html">留言</a></li>
+                    <li><a href="index.html" th:href="@{/visit/group}">网站首页</a></li>
+                    <li><a>漫画更新</a></li>
+                    <li><a>漫画排行</a></li>
+                    <li><a>全部分类</a></li>
+                    <li><a>日漫</a></li>
+                    <li><a th:href="@{/caricature/manage/login}">登录</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 </div>
 
+<div th:fragment="jp_sidebar">
+    <div class="sidebar">
+        <div class="search">
+            <form th:action="@{/visit/global/caricature/search}" method="get" name="searchform" id="searchform">
+                <input name="keyword" id="keyword" th:id="keyword" class="input_text" value="请输入关键字"
+                       style="color: rgb(153, 153, 153);"
+                       onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}"
+                       onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+                <input name="Submit" class="input_submit" value="搜索" type="submit">
+            </form>
+        </div>
+        <div class="paihang">
+            <h2 class="hometitle">点击排行</h2>
+            <ul>
+                <li th:each=" caricature : ${hottestCaricature}"><b><a href="/download/div/2015-04-10/746.html"
+                                                                       th:href="@{'/visit'+${caricature.path}(caricatureId=${caricature.id})}"
+                                                                       target="_blank"
+                                                                       th:text="${caricature.name}">.</a></b>
+                    <p class="message"><i><img th:src="${caricature.path} + '/' + ${caricature.name} + '.jpg'"></i><span
+                            th:text="${caricature.message}">展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标...</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="paihang">
+            <h2 class="hometitle">站长推荐</h2>
+            <ul>
+                <li th:each=" caricature : ${hottestCaricature}"><b><a href="/download/div/2015-04-10/746.html"
+                                                                       target="_blank"
+                                                                       th:text="${caricature.name}">.</a></b>
+                    <p class="message" th:class="message"><i><img
+                            th:src="${caricature.path} + '/' + ${caricature.name} + '.jpg'"></i><span
+                            th:text="${caricature.message}">展示的是首页html，博客页面布局格式简单，没有复杂的背景，色彩局部点缀，动态的幻灯片展示，切换卡，标...</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 <div th:fragment="jp_footer">
     <footer>
-        <p>Design by <a href="/">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a></p>
+        <p><a href="http://www.shonenjump.com/j/">周刊少年ジャンプ</a></p>
     </footer>
 </div>
 </body>

@@ -52,11 +52,12 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>名字</th>
+                                        <th>作者</th>
                                         <th>创建时间</th>
                                         <th>更新时间</th>
                                         <th>标题</th>
                                         <th>收藏</th>
-                                        <th>集数</th>
+                                        <th>篇数</th>
                                         <th>种类</th>
                                         <th>操作</th>
                                     </tr>
@@ -65,29 +66,32 @@
                                     <tr th:each="caricature : ${caricatureList}" class="odd gradeX">
                                         <td th:text="${caricature.id}">Trident</td>
                                         <td th:text="${caricature.name}"></td>
+                                        <td th:text="${caricature.author}"></td>
                                         <td th:text="${#dates.format(caricature.createTime, 'yyyy-MM-dd')}">Internet
                                             Explorer 4.0
                                         </td>
                                         <td th:text="${#dates.format(caricature.updateTime, 'yyyy-MM-dd')}">Win 95+</td>
                                         <td th:text="${caricature.title}"> 4</td>
                                         <td th:text="${caricature.star}">Trident</td>
-                                            Explorer 5.0
                                         </td>
                                         <td th:text="${caricature.level}">Win 95+</td>
                                         <td th:text="${@genreCaricatureServiceImpl.selectById(caricature.genre)?.getGenre()}">
                                             5
                                         </td>
                                         <td>
-                                            <a class="btn btn-small"><i class="icon-eye-open"></i>View</a>
+                                            <a class="btn btn-small" data-toggle="modal"
+                                               th:id="${caricature.path} + '/' + ${caricature.name} + '.jpg'"
+                                               onclick="onclickCaricatureCover(this.id)" data-target="#coverModal"><i
+                                                    class="icon-eye-open"></i>查看</a>
                                             <a class="btn btn-primary btn-small"
                                                th:onclick="| javascript:onclickPictureEdit(${caricature.id}) |"
                                                data-toggle="modal"
                                                data-target="#caricatureCreateModal"><i
-                                                    class="icon-pencil icon-white"></i> Edit</a>
+                                                    class="icon-pencil icon-white"></i> 修改</a>
                                             <a class="btn btn-danger btn-small"
                                                th:href="@{/caricature/manage/picture_del/{id}(id=${caricature.id})}"><i
                                                     class="icon-remove icon-white"></i>
-                                                Delete</a>
+                                                删除</a>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -120,6 +124,14 @@
                                             <label class="control-label" for="name">名字</label>
                                             <div class="controls">
                                                 <input class="input-large focused" id="name" th:field="*{name}"
+                                                       type="text" value="This is focused...">
+                                            </div>
+                                        </div>
+
+                                        <div class="control-group">
+                                            <label class="control-label" for="name">作者</label>
+                                            <div class="controls">
+                                                <input class="input-large focused" id="author" th:field="*{author}"
                                                        type="text" value="This is focused...">
                                             </div>
                                         </div>
@@ -162,6 +174,15 @@
                                             </div>
                                         </div>
 
+                                        <div class="control-group">
+                                            <label class="control-label" for="isAction">是否上架</label>
+                                            <div class="controls">
+                                                <input type="checkbox" id="isAction" th:id="isAction"
+                                                       th:field="*{isAction}">
+                                                没有选中无法阅读
+                                            </div>
+                                        </div>
+
                                         <div class="control-group hidden">
                                             <label class="control-label"></label>
                                             <div class="controls">
@@ -180,6 +201,26 @@
                         </div><!-- /.modal-content -->
                     </div><!-- /.modal-dialog -->
                 </div><!-- /.modal -->
+
+                <!-- 模态框（Modal） -->
+                <div class="modal fade" id="coverModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                     aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">封面</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img id="coverCaricature">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
 
             </div>
         </div>
